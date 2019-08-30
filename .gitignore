@@ -1,3 +1,5 @@
+module1/config.py
+
 # macOS Desktop Services Store
 .DS_Store
 
@@ -105,3 +107,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# ignore large dataset
+data/project-pubg/
