@@ -1,0 +1,745 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.4"
+    },
+    "colab": {
+      "name": "LS_DS8_241_Permutation Table.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/CurtCalledBurt/DS-Unit-2-Applied-Modeling/blob/master/BuildWeek/Day1_Permutations\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "xLkX8euRhedV",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "\n",
+        "df = pd.read_csv('/Users/curtismckendrick/Downloads/games.csv')"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "BDy879oahedb",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "df.columns"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "NUdaetGJhedg",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# traders is likely people who have the game and are willing to trade it\n",
+        "# wanters are those who want the game through trade, typically\n",
+        "# wishers are those who want to buy the game\n",
+        "# total_weights are either: \n",
+        "# 1. the total number of people have submitted a \"weight\" for the game or\n",
+        "# 2. the total number of all the weights submitted and added up\n",
+        "# a weight on the site is an abstract measure of how complex a game is\n",
+        "\n",
+        "\n",
+        "column_names = {'yearpublished': 'year_published', 'minplayers': 'min_players',\n",
+        "               'maxplayers': 'max_players','playingtime': 'playtime', \\\n",
+        "                'minplaytime': 'min_playtime', 'maxplaytime': 'max_playtime', \n",
+        "                'minage': 'min_age'}\n",
+        "df = df.rename(columns=column_names)"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "voHUUwQIhedk",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# feature selection\n",
+        "\n",
+        "# We try predicting 'average_rating' and see what happens with that.\n",
+        "target = 'average_rating'\n",
+        "\n",
+        "# Obviously we wouldn't know the bayes_average_rating if we knew the average rating, so we remove that from\n",
+        "# the features. And I'm considering removing the 2 weight columns again, because I still have no idea what \n",
+        "# they are. \n",
+        "\n",
+        "things_we_cannot_know = ['bayes_average_rating']\n",
+        "\n",
+        "things_we_do_not_need = ['name', 'type', 'id']\n",
+        "\n",
+        "# turns out max_playtime and playtime are the same column in all ways except three entrees\n",
+        "redundant = ['playtime']\n",
+        "\n",
+        "features = df.columns.drop([target] + things_we_cannot_know + things_we_do_not_need + redundant)\n",
+        "X = df[features]\n",
+        "y = df[target]\n",
+        "\n",
+        "\n",
+        "# We'll make a few things\n",
+        "\n",
+        "# Okay, I still don't get this whole setwithoutcopy error thing,\n",
+        "# but it looks like after making columns of X with binary operations you'll want to \n",
+        "# overwrite a copy of X with the new column, and then make a new copy.\n",
+        "# This is the only line of all the feature making lines that requires this.\n",
+        "X=X.copy()\n",
+        "# X['min_age_15_or_higher'] = X['min_age'] >= 15\n",
+        "X=X.copy()\n",
+        "\n",
+        "# X['total_interaction'] = X['total_owners'] + X['users_rated'] + X['total_traders'] + X['total_wanters'] + X['total_wishers'] + X['total_comments']\n",
+        "# X['total_owners_plus_raters'] = X['total_owners'] + X['users_rated']\n",
+        "# X['total_pos_interaction'] = X['total_owners'] + X['users_rated'] + X['total_comments']\n",
+        "# X['total_neg_interaction'] = X['total_traders'] + X['total_comments']\n",
+        "# X['hype'] = X['total_wanters'] + X['total_wishers'] + X['users_rated']\n",
+        "X['mean_playtime'] = (X['min_playtime'] + X['max_playtime']) / 2"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1X0NDeq5hedn",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# train/test/val split\n",
+        "\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2019)"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GvrjycENhedu",
+        "colab_type": "code",
+        "outputId": "6ba0880b-fefa-4cc9-b7a3-f549c683d4c4",
+        "colab": {}
+      },
+      "source": [
+        "# train/test/val split\n",
+        "X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, random_state=2019)\n",
+        "X_train.shape, y_train.shape, X_test.shape, y_test.shape, X_val.shape, y_val.shape"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "((45738, 16), (45738,), (20328, 16), (20328,), (15246, 16), (15246,))"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eWpoY5RThedy",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# quick and dirty baseline regressor\n",
+        "# note it returns a list the same size as the input\n",
+        "\n",
+        "def baseline_Regressor(target):\n",
+        "  from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "  # making a list of the same size as 'target' \n",
+        "  # with the mean of the target as the only possible entree\n",
+        "  mean_target = target.mean()\n",
+        "  pred_baseline = [mean_target] * len(target)\n",
+        "  \n",
+        "  #calculating baseline error and score\n",
+        "  mae = mean_absolute_error(target, pred_baseline)\n",
+        "  mse = mean_squared_error(target, pred_baseline)\n",
+        "  r2 = r2_score(target, pred_baseline)\n",
+        "  \n",
+        "  # printing the errors and scores\n",
+        "  return pred_baseline, mae, mse, r2"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jEe2GSnvhed0",
+        "colab_type": "code",
+        "outputId": "2749ebae-d048-4a1e-8825-ed49956a843e",
+        "colab": {}
+      },
+      "source": [
+        "# get a list of baseline predictions\n",
+        "y_pred_base, mae_base, mse_base, r2_base = baseline_Regressor(y_train)\n",
+        "mae_base, mse_base, r2_base"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(2.711469150949111, 9.321468469749549, 0.0)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HxBicv-Ihed4",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# Remember that eli5 doesn't play well with pipelines, so you need to make your\n",
+        "# model outside of a pipeline.\n",
+        "from sklearn.pipeline import make_pipeline\n",
+        "from sklearn.impute import SimpleImputer\n",
+        "import category_encoders as ce\n",
+        "from sklearn.ensemble import RandomForestRegressor\n",
+        "from sklearn.impute import SimpleImputer\n",
+        "\n",
+        "# we make our encoder and imputer in a pipeline\n",
+        "processor = make_pipeline(\n",
+        "    SimpleImputer(strategy='median')\n",
+        ")\n",
+        "\n",
+        "# we fit the processor onto the data\n",
+        "X_train_processed = processor.fit_transform(X_train)\n",
+        "X_val_processed = processor.transform(X_val)\n",
+        "\n",
+        "# we make our model outside the pipeline\n",
+        "pipeline = RandomForestRegressor(\n",
+        "        n_estimators=150,\n",
+        "        max_depth=15,\n",
+        "        min_samples_leaf=20,\n",
+        "        random_state=2019,\n",
+        "        n_jobs=-1\n",
+        ")\n",
+        "\n",
+        "# and fit our model to our processed data\n",
+        "pipeline.fit(X_train_processed, y_train);\n",
+        "y_pred_proba = pipeline.predict(X_val_processed)"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iBBPc0A8hed7",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# # Random forest model\n",
+        "\n",
+        "# # more robust modelling\n",
+        "# # we'll start with a random forest before making our way to xgboost\n",
+        "# from sklearn.pipeline import make_pipeline\n",
+        "# from sklearn.impute import SimpleImputer\n",
+        "# import category_encoders as ce\n",
+        "# from sklearn.ensemble import RandomForestRegressor\n",
+        "\n",
+        "\n",
+        "# pipeline = make_pipeline(\n",
+        "#     ce.OneHotEncoder(),\n",
+        "#     SimpleImputer(strategy='median'),\n",
+        "#     RandomForestRegressor(n_estimators=150, random_state=2019, n_jobs=-1)\n",
+        "# )\n",
+        "# # Fit the model\n",
+        "# pipeline.fit(X_train, y_train);"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TXvbYPx3hed8",
+        "colab_type": "code",
+        "outputId": "109323e5-34b2-4ee1-e8b0-559716772c26",
+        "colab": {}
+      },
+      "source": [
+        "# RandomForest error\n",
+        "\n",
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "print('Random Forest Error: \\n \\n')\n",
+        "\n",
+        "#make a prediction on the train set\n",
+        "y_pred = pipeline.predict(X_train_processed)\n",
+        "\n",
+        "# MAE of train set\n",
+        "mae = mean_absolute_error(y_train, y_pred)\n",
+        "print('MAE Train Error: ', mae)\n",
+        "\n",
+        "# RMSE of train set\n",
+        "rmse = np.sqrt(mean_squared_error(y_train, y_pred))\n",
+        "print('RMSE Train Error: ', rmse)\n",
+        "\n",
+        "# R2 score of train set\n",
+        "r2 = r2_score(y_train, y_pred)\n",
+        "print('Train R^2 Score: ', r2)\n",
+        "\n",
+        "\n",
+        "print('\\n')\n",
+        "\n",
+        "\n",
+        "# make prediction on the val set\n",
+        "y_pred = pipeline.predict(X_val_processed)\n",
+        "\n",
+        "# MAE of val set\n",
+        "mae = mean_absolute_error(y_val, y_pred)\n",
+        "print('MAE Val Error: ', mae)\n",
+        "\n",
+        "# RMSE of val set\n",
+        "rmse = np.sqrt(mean_squared_error(y_val, y_pred))\n",
+        "print('RMSE Val Error: ', rmse)\n",
+        "\n",
+        "# R2 score of val set\n",
+        "r2 = r2_score(y_val, y_pred)\n",
+        "print('Val R^2 Score: ', r2)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Random Forest Error: \n",
+            " \n",
+            "\n",
+            "MAE Train Error:  0.5651325576916049\n",
+            "RMSE Train Error:  0.9532240580175273\n",
+            "Train R^2 Score:  0.902522214420169\n",
+            "\n",
+            "\n",
+            "MAE Val Error:  0.5944598533038784\n",
+            "RMSE Val Error:  0.9934096606424526\n",
+            "Val R^2 Score:  0.8945277487880093\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hEoem0QbheeA",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import sklearn"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "BC6VcmtcheeD",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import eli5\n",
+        "from eli5.sklearn import PermutationImportance\n",
+        "\n",
+        "# See how defining an eli5 permuter takes a model but no data? that's\n",
+        "# why your data encoders could be used in a pipeline, but your model couldn't;\n",
+        "# the model needs to get passed in at definition. The data does not. \n",
+        "permuter = PermutationImportance(\n",
+        "    pipeline,\n",
+        "    scoring='neg_mean_absolute_error',\n",
+        "    n_iter=5,\n",
+        "#     random_state=2019\n",
+        ")\n",
+        "\n",
+        "# Now the data gets passed in.\n",
+        "permuter.fit(X_val_processed, y_val);"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qXrj17ETheeF",
+        "colab_type": "code",
+        "outputId": "d24ba5c9-ea5b-45df-9398-4c3608e8ed38",
+        "colab": {}
+      },
+      "source": [
+        "feature_names = X_val.columns.tolist()\n",
+        "pd.Series(permuter.feature_importances_, feature_names).sort_values(ascending=False)\n",
+        "\n",
+        "eli5.show_weights(\n",
+        "    permuter, \n",
+        "    top=None,\n",
+        "    feature_names=feature_names\n",
+        ")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "\n",
+              "    <style>\n",
+              "    table.eli5-weights tr:hover {\n",
+              "        filter: brightness(85%);\n",
+              "    }\n",
+              "</style>\n",
+              "\n",
+              "\n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "        <table class=\"eli5-weights eli5-feature-importances\" style=\"border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto;\">\n",
+              "    <thead>\n",
+              "    <tr style=\"border: none;\">\n",
+              "        <th style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">Weight</th>\n",
+              "        <th style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">Feature</th>\n",
+              "    </tr>\n",
+              "    </thead>\n",
+              "    <tbody>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 80.00%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                2.1728\n",
+              "                \n",
+              "                    &plusmn; 0.0307\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                users_rated\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 97.24%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.1281\n",
+              "                \n",
+              "                    &plusmn; 0.0049\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_wishers\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 97.50%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.1113\n",
+              "                \n",
+              "                    &plusmn; 0.0033\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                year_published\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 98.24%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0674\n",
+              "                \n",
+              "                    &plusmn; 0.0013\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                average_weight\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 98.45%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0564\n",
+              "                \n",
+              "                    &plusmn; 0.0033\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_wanters\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 98.75%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0412\n",
+              "                \n",
+              "                    &plusmn; 0.0025\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_traders\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.04%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0282\n",
+              "                \n",
+              "                    &plusmn; 0.0015\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_owners\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.52%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0105\n",
+              "                \n",
+              "                    &plusmn; 0.0017\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                min_age\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.56%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0092\n",
+              "                \n",
+              "                    &plusmn; 0.0013\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                max_players\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.63%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0073\n",
+              "                \n",
+              "                    &plusmn; 0.0015\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_comments\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.67%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0061\n",
+              "                \n",
+              "                    &plusmn; 0.0002\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                total_weights\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.72%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0050\n",
+              "                \n",
+              "                    &plusmn; 0.0012\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                max_playtime\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.83%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0024\n",
+              "                \n",
+              "                    &plusmn; 0.0006\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                hype\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.86%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0018\n",
+              "                \n",
+              "                    &plusmn; 0.0004\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                mean_playtime\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.86%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0018\n",
+              "                \n",
+              "                    &plusmn; 0.0005\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                min_players\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "        <tr style=\"background-color: hsl(120, 100.00%, 99.88%); border: none;\">\n",
+              "            <td style=\"padding: 0 1em 0 0.5em; text-align: right; border: none;\">\n",
+              "                0.0015\n",
+              "                \n",
+              "                    &plusmn; 0.0004\n",
+              "                \n",
+              "            </td>\n",
+              "            <td style=\"padding: 0 0.5em 0 0.5em; text-align: left; border: none;\">\n",
+              "                min_playtime\n",
+              "            </td>\n",
+              "        </tr>\n",
+              "    \n",
+              "    \n",
+              "    </tbody>\n",
+              "</table>\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "    \n",
+              "\n",
+              "\n",
+              "\n"
+            ],
+            "text/plain": [
+              "<IPython.core.display.HTML object>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KvbJ0fP6heeG",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
