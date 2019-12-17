@@ -108,3 +108,7 @@ venv.bak/
 
 # project CSV files
 data/project/*.csv
+
+# module 2 data
+module2/instacart_2017_05_01/*.csv
+module2/instacart_online_grocery_shopping_2017_05_01.tar.gz
