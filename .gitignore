@@ -105,3 +105,19 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+module2-wrangle-ml-datasets/instacart_2017_05_01/._aisles.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/._departments.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/._order_products__prior.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/._order_products__train.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/._orders.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/._products.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/aisles.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/departments.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/order_products__prior.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/order_products__train.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/orders.csv
+module2-wrangle-ml-datasets/instacart_2017_05_01/products.csv
+module2-wrangle-ml-datasets/instacart_online_grocery_shopping_2017_05_01.tar.gz
+data/dota/match_skill.csv
+data/dota/matches_small.csv
+data/dota/player_matches_small.csv
