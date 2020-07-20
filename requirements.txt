@@ -1,0 +1,9 @@
+wheel
+pandas
+numpy
+sklearn
+matplotlib
+seaborn
+category_encoders
+jupyter
+notebook
