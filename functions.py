@@ -59,7 +59,8 @@ def wrangle(data):
     col_drop = [
         'title_english','title_japanese','title_synonyms','image_url',
         'opening_theme','ending_theme','anime_id','background','premiered',
-        'broadcast','producer','licensor','aired_string','aired','score','scored_by','members','popularity'
+        'broadcast','producer','licensor','aired_string','aired','score',
+        'scored_by','members','popularity','favorites'
         ]
 
     df.drop(col_drop,axis=1,inplace=True)
