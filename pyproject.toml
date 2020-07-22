@@ -11,6 +11,11 @@ pandas = "^1.0.5"
 pandas_profiling = "^2.8.0"
 category_encoders = "^2.2.2"
 scikit-learn = "^0.23.1"
+xgboost = "^1.1.1"
+tune-sklearn = "^0.0.6"
+scikit-optimize = "^0.7.4"
+ray = "^0.8.6"
+tensorboardX = "^2.1"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
