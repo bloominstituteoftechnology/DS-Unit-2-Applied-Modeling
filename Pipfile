@@ -13,6 +13,8 @@ eli5 = "*"
 pandas-profiling = "*"
 pdpbox = "*"
 plotly = "*"
+xgboost = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.8"
