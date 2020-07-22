@@ -2,10 +2,12 @@ wheel
 pandas
 numpy
 sklearn
-matplotlib
+matplotlib.pyplot
 seaborn
 category_encoders
 jupyter
 notebook
 pandas_profiling
+plotly express
+xgboost
 
