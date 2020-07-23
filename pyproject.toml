@@ -16,6 +16,9 @@ tune-sklearn = "^0.0.6"
 scikit-optimize = "^0.7.4"
 ray = "^0.8.6"
 tensorboardX = "^2.1"
+shap = "^0.35.0"
+pdpbox = "^0.2.0"
+plotly = "^4.9.0"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
