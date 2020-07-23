@@ -2,7 +2,6 @@ wheel
 pandas
 numpy
 sklearn
-matplotlib.pyplot
 seaborn
 category_encoders
 jupyter
@@ -10,4 +9,6 @@ notebook
 pandas_profiling
 plotly express
 xgboost
+shap
+
 
