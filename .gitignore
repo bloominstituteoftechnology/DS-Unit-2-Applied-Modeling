@@ -105,3 +105,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# same thing but in the root directory
+*.csv
+*.tar.gz
+# dont upload datasets because they are really big
+/data/*/*
+
