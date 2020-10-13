@@ -18,6 +18,7 @@ scipy = "*"
 seaborn = "*"
 sklearn = "*"
 xgboost = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
