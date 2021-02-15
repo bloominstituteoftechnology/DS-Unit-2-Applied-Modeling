@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ds-unit-2-applied-modeling"
+version = "0.1.0"
+description = ""
+authors = ["Allan Gongora <agongora4030@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.9"
+numpy = "^1.19.1"
+pandas = "^1.0.5"
+pandas_profiling = "^2.8.0"
+category_encoders = "^2.2.2"
+scikit-learn = "^0.23.1"
+xgboost = "^1.1.1"
+tune-sklearn = "^0.0.6"
+scikit-optimize = "^0.7.4"
+ray = "^0.8.6"
+tensorboardX = "^2.1"
+shap = "^0.35.0"
+pdpbox = "^0.2.0"
+plotly = "^4.9.0"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+jupyterlab = "^2.2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
