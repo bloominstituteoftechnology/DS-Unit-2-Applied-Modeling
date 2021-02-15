@@ -1,0 +1,14 @@
+wheel
+pandas
+numpy
+sklearn
+seaborn
+category_encoders
+jupyter
+notebook
+pandas_profiling
+plotly express
+xgboost
+shap
+
+
