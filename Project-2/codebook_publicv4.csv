@@ -1,0 +1,2828 @@
+"2015 RECS Variable and Response Codebook",,,,,,,,,
+,,,,,,,,,
+,,,,,,"Variables in End-Use Models (see note at bottom)",,,
+"SAS Variable Name","Type","Length","Variable Description",,"Final Response Set","Electricity","Natural Gas","Propane","Fuel Oil/
+Kerosene"
+"DOEID","Character",5,"Unique identifier for each respondent","10001 - 
+15686","Unique identifier for each respondent",,,,
+"REGIONC","Numeric",8,"Census Region","1
+2
+3
+4","Northeast
+Midwest
+South
+West",,,,
+"DIVISION","Numeric",8,"Census Division","1
+2
+3
+4
+5
+6
+7
+8
+9
+10","New England
+Middle Atlantic
+East North Central
+West North Central
+South Atlantic
+East South Central
+West South Central
+Mountain North
+Mountain South
+Pacific",,,,
+"METROMICRO","Character",5,"Housing unit in Census Metropolitan Statistical Area or Micropolitan Statistical Area","METRO
+MICRO
+NONE","Housing unit in Census Metropolitan Statistical Area
+Housing unit in Census Micropolitan Statistical Area
+Housing unit in neither",,,,
+"UATYP10","Character",1,"Census 2010 Urban Type","U
+C
+R","Urban Area
+Urban Cluster
+Rural",,,,
+"TYPEHUQ","Numeric",8,"Type of housing unit","1
+2
+3
+4
+5","Mobile home
+Single-family detached house 
+Single-family attached house
+Apartment in a building with 2 to 4 units
+Apartment in a building with 5 or more units","SPH, AHUHEAT, COL, AHUCOL, COK","SPH, COK","SPH, COK","SPH, COK"
+"ZTYPEHUQ","Numeric",8,"Imputation flag for TYPEHUQ","1
+0","Imputed
+Not imputed",,,,
+"CELLAR","Numeric",8,"Housing unit over a basement","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZCELLAR","Numeric",8,"Imputation flag for CELLAR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"BASEFIN","Numeric",8,"Finished basement","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZBASEFIN","Numeric",8,"Imputation flag for BASEFIN","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ATTIC","Numeric",8,"Attic above the housing unit","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZATTIC","Numeric",8,"Imputation flag for ATTIC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ATTICFIN","Numeric",8,"Finished attic","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZATTICFIN","Numeric",8,"Imputation flag for ATTICFIN","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"STORIES","Numeric",8,"Number of stories in a single-family home","10
+20
+31
+32
+40
+-2","One story
+Two stories
+Three stories
+Four or more stories
+Split-level
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZSTORIES","Numeric",8,"Imputation flag for STORIES","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"PRKGPLC1","Numeric",8,"Attached garage","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZPRKGPLC1","Numeric",8,"Imputation flag for PRKGPLC1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SIZEOFGARAGE","Numeric",8,"Size of attached garage","1
+2
+3
+-2","One-car garage
+Two-car garage
+Three-or-more-car garage
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZSIZEOFGARAGE","Numeric",8,"Imputation flag for SIZEOFGARAGE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"KOWNRENT","Numeric",8,"Own or rent","1
+2
+3","Owned or being bought by someone in your household
+Rented
+Occupied without payment of rent",,,,
+"ZKOWNRENT","Numeric",8,"Imputation flag for KOWNRENT","1
+0","Imputed
+Not imputed",,,,
+"YEARMADERANGE","Numeric",8,"Range when housing unit was built","1
+2
+3
+4
+5
+6
+7
+8","Before 1950
+1950 to 1959
+1960 to 1969
+1970 to 1979
+1980 to 1989
+1990 to 1999
+2000 to 2009
+2010 to 2015",,,,
+"ZYEARMADERANGE","Numeric",8,"Imputation flag for YEARMADERANGE","1
+0","Imputed
+Not imputed",,,,
+"OCCUPYYRANGE","Numeric",8,"Range when household moved in","1
+2
+3
+4
+5
+6
+7
+8","Before 1950
+1950 to 1959
+1960 to 1969
+1970 to 1979
+1980 to 1989
+1990 to 1999
+2000 to 2009
+2010 to 2015",,,,
+"ZOCCUPYYRANGE","Numeric",8,"Imputation flag for OCCUPYYRANGE","1
+0","Imputed
+Not imputed",,,,
+"STUDIO","Numeric",8,"Studio apartment","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZSTUDIO","Numeric",8,"Imputation flag for STUDIO","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"BEDROOMS","Numeric",8,"Number of bedrooms","0 - 30","Number of bedrooms","HUM",,,
+"ZBEDROOMS","Numeric",8,"Imputation flag for BEDROOMS","1
+0","Imputed
+Not imputed",,,,
+"NCOMBATH","Numeric",8,"Number of full bathrooms","0 - 30","Number of full bathrooms",,,,
+"ZNCOMBATH","Numeric",8,"Imputation flag for NCOMBATH","1
+0","Imputed
+Not imputed",,,,
+"NHAFBATH","Numeric",8,"Number of half bathrooms","0 - 30","Number of half bathrooms",,,,
+"ZNHAFBATH","Numeric",8,"Imputation flag for NHAFBATH","1
+0","Imputed
+Not imputed",,,,
+"OTHROOMS","Numeric",8,"Number of other rooms","1 - 30","Number of other rooms",,,,
+"ZOTHROOMS","Numeric",8,"Imputation flag for OTHROOMS","1
+0","Imputed
+Not imputed",,,,
+"TOTROOMS","Numeric",8,"Total number of rooms in the housing unit, excluding bathrooms","1 - 60","Total number of rooms in the housing unit, excluding bathrooms","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZTOTROOMS","Numeric",8,"Imputation flag for TOTROOMS","1
+0","Imputed
+Not imputed",,,,
+"WALLTYPE","Numeric",8,"Major outside wall material","1
+2
+3
+4
+5
+6
+7
+9","Brick
+Wood
+Siding
+Stucco
+Shingle (composition)
+Stone
+Concrete or concrete block
+Other","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZWALLTYPE","Numeric",8,"Imputation flag for WALLTYPE","1
+0","Imputed
+Not imputed",,,,
+"ROOFTYPE","Numeric",8,"Major roofing material","1
+2
+3
+4
+5
+7
+9
+-2","Ceramic or clay tiles
+Wood shingles/shakes
+Metal
+Slate or synthetic shake
+Shingles (composition or asphalt)
+Concrete tiles
+Other
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZROOFTYPE","Numeric",8,"Imputation flag for ROOFTYPE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"HIGHCEIL","Numeric",8,"High ceilings","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZHIGHCEIL","Numeric",8,"Imputation flag for HIGHCEIL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DOOR1SUM","Numeric",8,"Number of sliding glass doors","0 - 10","Number of sliding glass doors",,,,
+"ZDOOR1SUM","Numeric",8,"Imputation flag for DOOR1SUM","1
+0","Imputed
+Not imputed",,,,
+"WINDOWS","Numeric",8,"Number of windows","10
+20
+30
+41
+42
+50
+60","1 to 2
+3 to 5
+6 to 9
+10 to 15
+16 to 19
+20 to 29
+30 or more",,,,
+"ZWINDOWS","Numeric",8,"Imputation flag for WINDOWS","1
+0","Imputed
+Not imputed",,,,
+"TYPEGLASS","Numeric",8,"Type of glass in most windows","1
+2
+3","Single-pane glass
+Double-pane glass
+Triple-pane glass",,,,
+"ZTYPEGLASS","Numeric",8,"Imputation flag for TYPEGLASS","1
+0","Imputed
+Not imputed",,,,
+"WINFRAME","Numeric",8,"Window frame material","1
+2
+3
+4
+5","Wood
+Metal (aluminum)
+Vinyl
+Composite
+Fiberglass",,,,
+"ZWINFRAME","Numeric",8,"Imputation flag for WINFRAME","1
+0","Imputed
+Not imputed",,,,
+"ADQINSUL","Numeric",8,"Level of insulation","1
+2
+3
+4","Well insulated
+Adequately insulated
+Poorly insulated
+Not insulated",,,,
+"ZADQINSUL","Numeric",8,"Imputation flag for ADQINSUL","1
+0","Imputed
+Not imputed",,,,
+"DRAFTY","Numeric",8,"Frequency of draft","1
+2
+3
+4","All the time
+Most of the time
+Some of the time
+Never",,,,
+"ZDRAFTY","Numeric",8,"Imputation flag for DRAFTY","1
+0","Imputed
+Not imputed",,,,
+"UGASHERE","Numeric",8,"Natural gas available in neighborhood","1
+0","Yes
+No",,,,
+"ZUGASHERE","Numeric",8,"Imputation flag for UGASHERE","1
+0","Imputed
+Not imputed",,,,
+"SWIMPOOL","Numeric",8,"Swimming pool","1
+0
+-2","Yes
+No
+Not applicable","PLPMP, NEC","PLHEAT","NEC","NEC"
+"ZSWIMPOOL","Numeric",8,"Imputation flag for SWIMPOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"MONPOOL","Numeric",8,"Months swimming pool used in the last year","0 - 12
+-2","Months swimming pool used in the last year
+Not applicable","PLPMP, NEC","PLHEAT","NEC","NEC"
+"ZMONPOOL","Numeric",8,"Imputation flag for MONPOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"POOL","Numeric",8,"Heated swimming pool","1
+0
+-2","Yes
+No
+Not applicable",,"PLHEAT",,
+"ZPOOL","Numeric",8,"Imputation flag for POOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELPOOL","Numeric",8,"Fuel used for heating swimming pool","1
+2
+3
+5
+8
+21
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Solar
+Some other fuel
+Not applicable",,"PLHEAT",,
+"ZFUELPOOL","Numeric",8,"Imputation flag for FUELPOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"RECBATH","Numeric",8,"Hot tub","1
+0","Yes
+No","HTBPMP, HTBHEAT","HTBHEAT","NEC",
+"ZRECBATH","Numeric",8,"Imputation flag for RECBATH","1
+0","Imputed
+Not imputed",,,,
+"MONTUB","Numeric",8,"Months hot tub used in the last year","0 - 12
+-2","Months hot tub used in the last year
+Not applicable","HTBPMP, HTBHEAT","HTBHEAT","NEC",
+"ZMONTUB","Numeric",8,"Imputation flag for MONTUB","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELTUB","Numeric",8,"Fuel used for heating hot tub","1
+2
+3
+5
+8
+21
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Solar
+Some other fuel
+Not applicable","HTBHEAT","HTBHEAT","NEC",
+"ZFUELTUB","Numeric",8,"Imputation flag for FUELTUB","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"OUTLET","Numeric",8,"Outlet within 20 feet of vehicle parking","1
+0
+-2","Yes
+No
+Not applicable","NEC",,,
+"ZOUTLET","Numeric",8,"Imputation flag for OUTLET","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ALTFUELPEV","Numeric",8,"Plug-in electric vehicle","1
+0","Yes
+No","NEC",,,
+"ZALTFUELPEV","Numeric",8,"Imputation flag for ALTFUELPEV","1
+0","Imputed
+Not imputed",,,,
+"BACKUP","Numeric",8,"Back-up generator","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZBACKUP","Numeric",8,"Imputation flag for BACKUP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SOLAR","Numeric",8,"On-site electricity generation from solar","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"NUMFRIG","Numeric",8,"Number of refrigerators used","0 - 30","Number of refrigerators used","RFG",,,
+"ZNUMFRIG","Numeric",8,"Imputation flag for NUMFRIG","1
+0","Imputed
+Not imputed",,,,
+"SIZRFRI1","Numeric",8,"Size of most-used refrigerator","1
+2
+3
+4
+5
+-2","Half-size or compact
+Small (17.5 cubic feet or less)
+Medium (17.6 to 22.5 cubic feet)
+Large (22.6 to 29.5 cubic feet)
+Very large (bigger than 29.5 cubic feet)
+Not applicable","RFG",,,
+"ZSIZRFRI1","Numeric",8,"Imputation flag for SIZRFRI1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TYPERFR1","Numeric",8,"Door arrangement of most-used refrigerator","1
+21
+22
+23
+5
+-2","One door
+Two doors, freezer next to the refrigerator
+Two doors, freezer above the refrigerator
+Two doors, freezer below the refrigerator
+Three or more doors
+Not applicable","RFG",,,
+"ZTYPERFR1","Numeric",8,"Imputation flag for TYPERFR1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGERFRI1","Numeric",8,"Age of most-used refrigerator","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","RFG",,,
+"ZAGERFRI1","Numeric",8,"Imputation flag for AGERFRI1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ICE","Numeric",8,"Through-the-door ice on most-used refrigerator","1
+0
+-2","Yes
+No
+Not applicable","RFG",,,
+"ZICE","Numeric",8,"Imputation flag for ICE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SIZRFRI2","Numeric",8,"Size of second most-used refrigerator","1
+2
+3
+4
+5
+-2","Half-size or compact
+Small (17.5 cubic feet or less)
+Medium (17.6 to 22.5 cubic feet)
+Large (22.6 to 29.5 cubic feet)
+Very large (bigger than 29.5 cubic feet)
+Not applicable","RFG",,,
+"ZSIZRFRI2","Numeric",8,"Imputation flag for SIZRFRI2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TYPERFR2","Numeric",8,"Door arrangement of second most-used refrigerator","1
+21
+22
+23
+5
+-2","One door
+Two doors, freezer next to the refrigerator
+Two doors, freezer above the refrigerator
+Two doors, freezer below the refrigerator
+Three or more doors
+Not applicable","RFG",,,
+"ZTYPERFR2","Numeric",8,"Imputation flag for TYPERFR2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGERFRI2","Numeric",8,"Age of second most-used refrigerator","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","RFG",,,
+"ZAGERFRI2","Numeric",8,"Imputation flag for AGERFRI2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"LOCRFRI2","Numeric",8,"Location of second most-used refrigerator","1
+2
+3
+4
+9
+-2","Basement
+Garage
+Outside
+Main floor of house
+Other
+Not applicable","RFG",,,
+"ZLOCRFRI2","Numeric",8,"Imputation flag for LOCRFRI2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NUMFREEZ","Numeric",8,"Number of separate freezers used","0 - 30","Number of separate freezers used","FRZ",,,
+"ZNUMFREEZ","Numeric",8,"Imputation flag for NUMFREEZ","1
+0","Imputed
+Not imputed",,,,
+"UPRTFRZR","Numeric",8,"Door arrangement of most-used freezer","1
+2
+-2","Upright
+Chest
+Not applicable","FRZ",,,
+"ZUPRTFRZR","Numeric",8,"Imputation flag for UPRTFRZR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SIZFREEZ","Numeric",8,"Size of most-used freezer","1
+2
+3
+4
+5
+-2","Half-size or compact
+Small (17.5 cubic feet or less)
+Medium (17.6 to 22.5 cubic feet)
+Large (22.6 to 29.5 cubic feet)
+Very large (bigger than 29.5 cubic feet)
+Not applicable","FRZ",,,
+"ZSIZFREEZ","Numeric",8,"Imputation flag for SIZFREEZ","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGEFRZR","Numeric",8,"Age of most-used freezer","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","FRZ",,,
+"ZAGEFRZR","Numeric",8,"Imputation flag for AGEFRZR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"STOVEN","Numeric",8,"Number of stoves","0 - 9","Number of stoves","COK","COK","COK",
+"ZSTOVEN","Numeric",8,"Imputation flag for STOVEN","1
+0","Imputed
+Not imputed",,,,
+"STOVENFUEL","Numeric",8,"Fuel used by stove","1
+2
+5
+13
+21
+-2","Natural gas from underground pipes 
+Propane (bottled gas) 
+Electricity
+Dual fuel
+Some other fuel
+Not applicable","COK","COK","COK",
+"ZSTOVENFUEL","Numeric",8,"Imputation flag for STOVENFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DUALCOOKTFUEL","Numeric",8,"Fuel used by cooktop part of stove","1
+2
+5
+21
+-2","Natural gas from underground pipes 
+Propane (bottled gas)
+Electricity
+Some other fuel
+Not applicable","COK","COK","COK",
+"ZDUALCOOKTFUEL","Numeric",8,"Imputation flag for DUALCOOKTFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DUALOVENFUEL","Numeric",8,"Fuel used by oven part of stove","1
+2
+5
+21
+-2","Natural gas from underground pipes 
+Propane (bottled gas)
+Electricity
+Some other fuel
+Not applicable","COK","COK","COK",
+"ZDUALOVENFUEL","Numeric",8,"Imputation flag for DUALOVENFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"COOKTUSE","Numeric",8,"Frequency of use of cooktop part of stove","0 - 99
+-2","Frequency of use of cooktop part of stove per week
+Not applicable","COK","COK","COK",
+"ZCOOKTUSE","Numeric",8,"Imputation flag for COOKTUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"OVENUSE","Numeric",8,"Frequency of use of oven part of stove","0 - 99
+-2","Frequency of use of oven part of stove per week
+Not applicable","COK","COK","COK",
+"ZOVENUSE","Numeric",8,"Imputation flag for OVENUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"STOVE","Numeric",8,"Number of separate cooktops","0 - 9","Number of separate cooktops","COK","COK","COK",
+"ZSTOVE","Numeric",8,"Imputation flag for STOVE","1
+0","Imputed
+Not imputed",,,,
+"STOVEFUEL","Numeric",8,"Fuel used by separate cooktop","1
+2
+5
+21
+-2","Natural gas from underground pipes 
+Propane (bottled gas)
+Electricity
+Some other fuel
+Not applicable","COK","COK","COK",
+"ZSTOVEFUEL","Numeric",8,"Imputation flag for STOVEFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SEPCOOKTUSE","Numeric",8,"Frequency of separate cooktop use","0 - 99
+-2","Frequency of separate cooktop use per week
+Not applicable","COK","COK","COK",
+"ZSEPCOOKTUSE","Numeric",8,"Imputation flag for SEPCOOKTUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"OVEN","Numeric",8,"Number of separate ovens","0 - 9","Number of separate ovens","COK","COK","COK",
+"ZOVEN","Numeric",8,"Imputation flag for OVEN","1
+0","Imputed
+Not imputed",,,,
+"OVENFUEL","Numeric",8,"Fuel used by separate oven","1
+2
+5
+21
+-2","Natural gas from underground pipes 
+Propane (bottled gas)
+Electricity
+Some other fuel
+Not applicable","COK","COK","COK",
+"ZOVENFUEL","Numeric",8,"Imputation flag for OVENFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SEPOVENUSE","Numeric",8,"Frequency of separate oven use","0 - 99
+-2","Frequency of separate oven use per week
+Not applicable","COK","COK","COK",
+"ZSEPOVENUSE","Numeric",8,"Imputation flag for SEPOVENUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"MICRO","Numeric",8,"Microwave oven used","0 - 9","Number of microwave ovens",,,,
+"ZMICRO","Numeric",8,"Imputation flag for MICRO","1
+0","Imputed
+Not imputed",,,,
+"AMTMICRO","Numeric",8,"Frequency of microwave use","0 - 99
+-2","Frequency of microwave use per week
+Not applicable","MICRO",,,
+"ZAMTMICRO","Numeric",8,"Imputation flag for AMTMICRO","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"OUTGRILL","Numeric",8,"Outdoor grill used","1
+0","Yes
+No",,"NEC",,
+"ZOUTGRILL","Numeric",8,"Imputation flag for OUTGRILL","1
+0","Imputed
+Not imputed",,,,
+"OUTGRILLFUEL","Numeric",8,"Fuels used by outdoor grill","1
+2
+21
+23
+-2","Natural gas from underground pipes 
+Propane (bottled gas)
+Some other fuel
+Charcoal
+Not applicable",,"NEC",,
+"ZOUTGRILLFUEL","Numeric",8,"Imputation flag for OUTGRILLFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NUMMEAL","Numeric",8,"Frequency hot meals are cooked","1
+2
+3
+4
+5
+6
+0","Three or more times a day
+Two times a day
+Once a day
+A few times each week
+About once a week
+Less than once a week
+Never",,,,
+"ZNUMMEAL","Numeric",8,"Imputation flag for NUMMEAL","1
+0","Imputed
+Not imputed",,,,
+"TOAST","Numeric",8,"Toaster used","1
+0","Yes
+No","NEC",,,
+"ZTOAST","Numeric",8,"Imputation flag for TOAST","1
+0","Imputed
+Not imputed",,,,
+"TOASTOVN","Numeric",8,"Toaster oven used","1
+0","Yes
+No","NEC",,,
+"ZTOASTOVN","Numeric",8,"Imputation flag for TOASTOVN","1
+0","Imputed
+Not imputed",,,,
+"COFFEE","Numeric",8,"Coffee maker used","1
+0","Yes
+No","NEC",,,
+"ZCOFFEE","Numeric",8,"Imputation flag for COFFEE","1
+0","Imputed
+Not imputed",,,,
+"CROCKPOT","Numeric",8,"Crockpot or slow cooker used","1
+0","Yes
+No","NEC",,,
+"ZCROCKPOT","Numeric",8,"Imputation flag for CROCKPOT","1
+0","Imputed
+Not imputed",,,,
+"FOODPROC","Numeric",8,"Food processor used","1
+0","Yes
+No","NEC",,,
+"ZFOODPROC","Numeric",8,"Imputation flag for FOODPROC","1
+0","Imputed
+Not imputed",,,,
+"RICECOOK","Numeric",8,"Rice cooker used","1
+0","Yes
+No","NEC",,,
+"ZRICECOOK","Numeric",8,"Imputation flag for RICECOOK","1
+0","Imputed
+Not imputed",,,,
+"BLENDER","Numeric",8,"Blender or juicer used","1
+0","Yes
+No","NEC",,,
+"ZBLENDER","Numeric",8,"Imputation flag for BLENDER","1
+0","Imputed
+Not imputed",,,,
+"APPOTHER","Numeric",8,"Other small appliance used","1
+0","Yes
+No","NEC",,,
+"ZAPPOTHER","Numeric",8,"Imputation flag for APPOTHER","1
+0","Imputed
+Not imputed",,,,
+"DISHWASH","Numeric",8,"Have dishwasher","1
+0","Yes
+No","DWH",,,
+"ZDISHWASH","Numeric",8,"Imputation flag for DISHWASH","1
+0","Imputed
+Not imputed",,,,
+"DWASHUSE","Numeric",8,"Frequency of dishwasher use","0 - 99
+-2 ","Frequency of dishwasher use per week
+Not applicable","DWH",,,
+"ZDWASHUSE","Numeric",8,"Imputation flag for DWASHUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DWCYCLE","Numeric",8,"Dishwasher cycle type","1
+2
+3
+4
+5
+-2","Normal or default cycle without heated dry
+Normal or default cycle with heated dry
+Heavy or “pots and pans” cycle
+Light or delicate cycle
+Energy saver
+Not applicable",,,,
+"ZDWCYCLE","Numeric",8,"Imputation flag for DWCYCLE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGEDW","Numeric",8,"Age of dishwasher","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","DWH",,,
+"ZAGEDW","Numeric",8,"Imputation flag for AGEDW","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"CWASHER","Numeric",8,"Have clothes washer in home","1
+0","Yes
+No","CW",,,
+"ZCWASHER","Numeric",8,"Imputation flag for CWASHER","1
+0","Imputed
+Not imputed",,,,
+"TOPFRONT","Numeric",8,"Top or front loading clothes washer","1
+2
+-2","Top loading
+Front loading
+Not applicable","CW",,,
+"ZTOPFRONT","Numeric",8,"Imputation flag for TOPFRONT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WASHLOAD","Numeric",8,"Frequency of clothes washer use","0 - 99
+-2","Frequency of clothes washer use per week
+Not applicable","CW",,,
+"ZWASHLOAD","Numeric",8,"Imputation flag for WASHLOAD","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WASHTEMP","Numeric",8,"Water temperature used for wash cycle","1
+2
+3
+-2","Hot
+Warm
+Cold
+Not applicable",,,,
+"ZWASHTEMP","Numeric",8,"Imputation flag for WASHTEMP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"RNSETEMP","Numeric",8,"Water temperature used for rinse cycle","1
+2
+3
+-2","Hot
+Warm
+Cold
+Not applicable",,,,
+"ZRNSETEMP","Numeric",8,"Imputation flag for RNSETEMP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGECWASH","Numeric",8,"Age of clothes washer","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable",,,,
+"ZAGECWASH","Numeric",8,"Imputation flag for AGECWASH","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DRYER","Numeric",8,"Have clothes dryer in home","1
+0","Yes
+No","CDR","CDR","CDR",
+"ZDRYER","Numeric",8,"Imputation flag for DRYER","1
+0","Imputed
+Not imputed",,,,
+"DRYRFUEL","Numeric",8,"Fuel used by clothes dryer","1
+2
+5
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Electricity
+Not applicable","CDR","CDR","CDR",
+"ZDRYRFUEL","Numeric",8,"Imputation flag for DRYRFUEL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DRYRUSE","Numeric",8,"Frequency of clothes dryer use","0 - 99
+-2 ","Frequency of clothes dryer use per week
+Not applicable","CDR","CDR","CDR",
+"ZDRYRUSE","Numeric",8,"Imputation flag for DRYRUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGECDRYER","Numeric",8,"Age of clothes dryer","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable",,,,
+"ZAGECDRYER","Numeric",8,"Imputation flag for AGECDRYER","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVCOLOR","Numeric",8,"Number of televisions used","0 - 30","Number of televisions used","TVREL",,,
+"ZTVCOLOR","Numeric",8,"Imputation flag for TVCOLOR","1
+0","Imputed
+Not imputed",,,,
+"TVSIZE1","Numeric",8,"Size of most-used TV","1
+2
+3
+4
+-2","27 inches or less
+28 to 39 inches
+40 to 59 inches
+60 inches or more
+Not applicable","TVREL",,,
+"ZTVSIZE1","Numeric",8,"Imputation flag for TVSIZE1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVTYPE1","Numeric",8,"Display type of most-used TV","1
+2
+3
+4
+5
+-2","LCD
+Plasma
+LED
+Projection
+Standard tube
+Not applicable","TVREL",,,
+"ZTVTYPE1","Numeric",8,"Imputation flag for TVTYPE1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVONWD1","Numeric",8,"Most-used TV usage on weekdays","1
+2
+3
+4
+5
+-2","Less than 1 hour
+1 to 3 hours  
+4 to 6 hours 
+7 to 10 hours 
+More than 10 hours
+Not applicable","TVREL",,,
+"ZTVONWD1","Numeric",8,"Imputation flag for TVONWD1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVONWE1","Numeric",8,"Most-used TV usage on weekends","1
+2
+3
+4
+5
+-2","Less than 1 hour
+1 to 3 hours  
+4 to 6 hours 
+7 to 10 hours 
+More than 10 hours
+Not applicable","TVREL",,,
+"ZTVONWE1","Numeric",8,"Imputation flag for TVONWE1","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVSIZE2","Numeric",8,"Size of second most-used TV","1
+2
+3
+4
+-2","27 inches or less
+28 to 39 inches
+40 to 59 inches
+60 inches or more
+Not applicable","TVREL",,,
+"ZTVSIZE2","Numeric",8,"Imputation flag for TVSIZE2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVTYPE2","Numeric",8,"Display type of second most-used TV","1
+2
+3
+4
+5
+-2","LCD
+Plasma
+LED
+Projection
+Standard tube
+Not applicable","TVREL",,,
+"ZTVTYPE2","Numeric",8,"Imputation flag for TVTYPE2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVONWD2","Numeric",8,"Second most-used TV usage on weekdays","1
+2
+3
+4
+5
+-2","Less than 1 hour
+1 to 3 hours  
+4 to 6 hours 
+7 to 10 hours 
+More than 10 hours
+Not applicable","TVREL",,,
+"ZTVONWD2","Numeric",8,"Imputation flag for TVONWD2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVONWE2","Numeric",8,"Second most-used TV usage on weekends","1
+2
+3
+4
+5
+-2","Less than 1 hour
+1 to 3 hours  
+4 to 6 hours 
+7 to 10 hours 
+More than 10 hours
+Not applicable","TVREL",,,
+"ZTVONWE2","Numeric",8,"Imputation flag for TVONWE2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"CABLESAT","Numeric",8,"Number of cable or satellite boxes without DVR","0 - 30
+-2","Number of cable or satellite boxes without DVR
+Not applicable","TVREL",,,
+"ZCABLESAT","Numeric",8,"Imputation flag for CABLESAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"COMBODVR","Numeric",8,"Number of cable or satellite boxes with DVR","0 - 30
+-2","Number of cable or satellite boxes with DVR
+Not applicable","TVREL",,,
+"ZCOMBODVR","Numeric",8,"Imputation flag for COMBODVR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SEPDVR","Numeric",8,"Number of separate DVRs","0 - 30
+-2","Number of separate DVRs
+Not applicable","TVREL",,,
+"ZSEPDVR","Numeric",8,"Imputation flag for SEPDVR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"PLAYSTA","Numeric",8,"Number of video game consoles","0 - 30
+-2","Number of video game consoles
+Not applicable","TVREL",,,
+"ZPLAYSTA","Numeric",8,"Imputation flag for PLAYSTA","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DVD","Numeric",8,"Number of DVD or Blu-ray players","0 - 30
+-2 ","Number of DVD or Blu-ray players
+Not applicable","TVREL",,,
+"ZDVD","Numeric",8,"Imputation flag for DVD","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"VCR","Numeric",8,"Number of VCRs","0 - 30
+-2","Number of VCRs
+Not applicable","TVREL",,,
+"ZVCR","Numeric",8,"Imputation flag for VCR","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"INTSTREAM","Numeric",8,"Number of internet streaming devices","0 - 30
+-2 ","Number of internet streaming devices
+Not applicable","TVREL",,,
+"ZINTSTREAM","Numeric",8,"Imputation flag for INTSTREAM","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TVAUDIOSYS","Numeric",8,"Number of home theater or audio systems","0 - 30
+-2","Number of home theater or audio systems
+Not applicable",,,,
+"ZTVAUDIOSYS","Numeric",8,"Imputation flag for TVAUDIOSYS","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"DESKTOP","Numeric",8,"Number of desktop computers","0 - 30","Number of desktop computers","NEC",,,
+"ZDESKTOP","Numeric",8,"Imputation flag for DESKTOP","1
+0","Imputed
+Not imputed",,,,
+"NUMLAPTOP","Numeric",8,"Number of laptop computers","0 - 30","Number of laptop computers","NEC",,,
+"ZNUMLAPTOP","Numeric",8,"Imputation flag for NUMLAPTOP","1
+0","Imputed
+Not imputed",,,,
+"NUMTABLET","Numeric",8,"Number of tablet computers or e-readers","0 - 30","Number of tablet computers or e-readers","NEC",,,
+"ZNUMTABLET","Numeric",8,"Imputation flag for NUMTABLET","1
+0","Imputed
+Not imputed",,,,
+"ELPERIPH","Numeric",8,"Number of printers, scanners, fax machines, or copiers","0 - 30","Number of printers, scanners, fax machines, or copiers","NEC",,,
+"ZELPERIPH","Numeric",8,"Imputation flag for ELPERIPH","1
+0","Imputed
+Not imputed",,,,
+"NUMSMPHONE","Numeric",8,"Number of smart phones","0 - 30","Number of smart phones","NEC",,,
+"ZNUMSMPHONE","Numeric",8,"Imputation flag for NUMSMPHONE","1
+0","Imputed
+Not imputed",,,,
+"CELLPHONE","Numeric",8,"Number of other cell phones","0 - 30","Number of other cell phones","NEC",,,
+"ZCELLPHONE","Numeric",8,"Imputation flag for CELLPHONE","1
+0","Imputed
+Not imputed",,,,
+"INTERNET","Numeric",8,"Internet access at home","1
+0","Yes
+No","NEC",,,
+"ZINTERNET","Numeric",8,"Imputation flag for INTERNET","1
+0","Imputed
+Not imputed",,,,
+"INWIRELESS","Numeric",8,"Wireless internet access","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZINWIRELESS","Numeric",8,"Imputation flag for INWIRELESS","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"HEATHOME","Numeric",8,"Space heating used","1
+0","Yes
+No","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZHEATHOME","Numeric",8,"Imputation flag for HEATHOME","1
+0","Imputed
+Not imputed",,,,
+"DNTHEAT","Numeric",8,"No space heating equipment, or unused space heating equipment","1
+2
+-2","Have equipment, but don't use it
+Don't have equipment
+Not applicable",,,,
+"ZDNTHEAT","Numeric",8,"Imputation flag for DNTHEAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"EQUIPM","Numeric",8,"Main space heating equipment type","2
+3
+4
+5
+6
+7
+8
+9
+10
+21
+-2","Steam/hot water system with radiators or pipes
+Central furnace
+Heat pump
+Built-in electric units installed in walls, ceilings, baseboards, or floors
+Built-in floor/wall pipeless furnace
+Built-in room heater burning gas, oil, or kerosene
+Wood-burning stove (cordwood or pellets)
+Fireplace
+Portable electric heaters
+Some other equipment
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZEQUIPM","Numeric",8,"Imputation flag for EQUIPM","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELHEAT","Numeric",8,"Main space heating fuel","1
+2
+3
+5
+7
+21
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Wood (cordwood or pellets)
+Some other fuel
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZFUELHEAT","Numeric",8,"Imputation flag for FUELHEAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"EQUIPAGE","Numeric",8,"Age of main space heating equipment","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years old
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZEQUIPAGE","Numeric",8,"Imputation flag for EQUIPAGE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"THERMAIN","Numeric",8,"Any thermostats","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZTHERMAIN","Numeric",8,"Imputation flag for THERMAIN","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"PROTHERM","Numeric",8,"Programmable main thermostat","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZPROTHERM","Numeric",8,"Imputation flag for PROTHERM","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"EQUIPMUSE","Numeric",8,"Main heating equipment household behavior","1
+2
+3
+4
+5
+9
+-9","Set one temperature and leave it there most of the time
+Manually adjust the temperature at night or when no one is at home
+Program the thermostat to automatically adjust the temperature during the day and night at certain times
+Turn equipment on or off as needed
+Our household does not have control over the equipment
+Other
+Not applicable",,,,
+"ZEQUIPMUSE","Numeric",8,"Imputation flag for EQUIPMUSE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPHOME","Numeric",8,"Winter temperature when someone is home during the day","50 - 90
+-2","Winter temperature when someone is home during the day
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZTEMPHOME","Numeric",8,"Imputation flag for TEMPHOME","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPGONE","Numeric",8,"Winter temperature when no one is home during the day","50 - 90
+-2","Winter temperature when no one is home during the day
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZTEMPGONE","Numeric",8,"Imputation flag for TEMPGONE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPNITE","Numeric",8,"Winter temperature at night","50 - 90
+-2","Winter temperature at night
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZTEMPNITE","Numeric",8,"Imputation flag for TEMPNITE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"EQUIPAUX","Numeric",8,"Secondary space heating equipment used","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZEQUIPAUX","Numeric",8,"Imputation flag for EQUIPAUX","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"EQUIPAUXTYPE","Numeric",8,"Secondary space heating equipment type","1
+2
+3
+4
+9
+-2","Portable electric heater
+Wood-burning stove (cordwood or pellets)
+Natural gas fireplace
+Wood-burning fireplace
+Some other equipment
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZEQUIPAUXTYPE","Numeric",8,"Imputation flag for EQUIPAUXTYPE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELAUX","Numeric",8,"Secondary space heating fuel","1
+2
+3
+5
+7
+21
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Wood (cordwood or pellets)
+Some other fuel
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZFUELAUX","Numeric",8,"Imputation flag for FUELAUX","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"BASEHEAT","Numeric",8,"Heating used in basement","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZBASEHEAT","Numeric",8,"Imputation flag for BASEHEAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ATTCHEAT","Numeric",8,"Heating used in attic","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZATTCHEAT","Numeric",8,"Imputation flag for ATTCHEAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"GARGHEAT","Numeric",8,"Heating used in attached garage","1
+0
+-2","Yes
+No
+Not applicable","SPH, AHUHEAT","SPH","SPH","SPH"
+"ZGARGHEAT","Numeric",8,"Imputation flag for GARGHEAT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"MOISTURE","Numeric",8,"Humidifier used","1
+0","Yes
+No",,,,
+"ZMOISTURE","Numeric",8,"Imputation flag for MOISTURE","1
+0","Imputed
+Not imputed",,,,
+"USEMOISTURE","Numeric",8,"Number of months humidifier used in last year","0 - 12
+-2","Number of months humidifier used in last year
+Not applicable","HUM",,,
+"ZUSEMOISTURE","Numeric",8,"Imputation flag for USEMOISTURE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AIRCOND","Numeric",8,"Air conditioning equipment used","1
+0","Yes
+No","COL",,,
+"ZAIRCOND","Numeric",8,"Imputation flag for AIRCOND","1
+0","Imputed
+Not imputed",,,,
+"COOLTYPE","Numeric",8,"Type of air conditioning equipment used","1
+2
+3
+-2","Central air conditioning system
+Individual window/wall or portable units 
+Both a central system and individual units
+Not applicable","COL",,,
+"ZCOOLTYPE","Numeric",8,"Imputation flag for COOLTYPE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"CENACHP","Numeric",8,"Central air conditioner is a heat pump","1
+0
+-2","Yes
+No
+Not applicable","COL",,,
+"ZCENACHP","Numeric",8,"Imputation flag for CENACHP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AGECENAC","Numeric",8,"Age of central air conditioner","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","COL",,,
+"ZAGECENAC","Numeric",8,"Imputation flag for AGECENAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"THERMAINAC","Numeric",8,"Thermostat for central air conditioner","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZTHERMAINAC","Numeric",8,"Imputation flag for THERMAINAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"PROTHERMAC","Numeric",8,"Programmable thermostat for central air conditioner","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZPROTHERMAC","Numeric",8,"Imputation flag for PROTHERMAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"USECENAC","Numeric",8,"Central air conditioner household behavior","1
+2
+3
+4
+5
+-2","Set one temperature and leave it there most of the time
+Manually adjust the temperature at night or when no one is at home
+Program the thermostat to automatically adjust the temperature during the day and night at certain times
+Turn equipment on or off as needed
+Our household does not have control over the equipment
+Not applicable","COL",,,
+"ZUSECENAC","Numeric",8,"Imputation flag for USECENAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NUMBERAC","Numeric",8,"Number of individual air conditioning units used","1 - 15
+-2","Number of individual air conditioning units used
+Not applicable","COL",,,
+"ZNUMBERAC","Numeric",8,"Imputation flag for NUMBERAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WWACAGE","Numeric",8,"Age of most-used individual air conditioning unit","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable","COL",,,
+"ZWWACAGE","Numeric",8,"Imputation flag for WWACAGE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"USEWWAC","Numeric",8,"Most-used individual air conditioning unit household behavior","1
+2
+3
+4
+5
+9
+-2","Set one temperature and leave it there most of the time
+Manually adjust the temperature at night or when no one is at home
+Program the thermostat to automatically adjust the temperature during the day and night at certain times
+Turn equipment on or off as needed
+Our household does not have control over the equipment
+Other
+Not applicable","COL",,,
+"ZUSEWWAC","Numeric",8,"Imputation flag for USEWWAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPHOMEAC","Numeric",8,"Summer temperature when someone is home during the day","50 - 90
+-2","Summer temperature when someone is home during the day
+Not applicable","COL",,,
+"ZTEMPHOMEAC","Numeric",8,"Imputation flag for TEMPHOMEAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPGONEAC","Numeric",8,"Summer temperature when no one is home during the day","50 - 90
+-2","Summer temperature when no one is home during the day
+Not applicable","COL",,,
+"ZTEMPGONEAC","Numeric",8,"Imputation flag for TEMPGONEAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"TEMPNITEAC","Numeric",8,"Summer temperature at night","50 - 90
+-2","Summer temperature at night
+Not applicable","COL",,,
+"ZTEMPNITEAC","Numeric",8,"Imputation flag for TEMPNITEAC","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"BASECOOL","Numeric",8,"Cooling used in basement","1
+0
+-2","Yes
+No
+Not applicable","COL",,,
+"ZBASECOOL","Numeric",8,"Imputation flag for BASECOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ATTCCOOL","Numeric",8,"Cooling used in attic","1
+0
+-2","Yes
+No
+Not applicable","COL",,,
+"ZATTCCOOL","Numeric",8,"Imputation flag for ATTCCOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"GARGCOOL","Numeric",8,"Cooling used in attached garage","1
+0
+-2","Yes
+No
+Not applicable","COL, RFG",,,
+"ZGARGCOOL","Numeric",8,"Imputation flag for GARGCOOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SWAMPCOL","Numeric",8,"Swamp cooler used","1
+0
+-2","Yes
+No
+Not applicable","EVAPCOL",,,
+"ZSWAMPCOL","Numeric",8,"Imputation flag for SWAMPCOL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NUMCFAN","Numeric",8,"Number of ceiling fans used","0 - 15","Number of ceiling fans used","CFAN",,,
+"ZNUMCFAN","Numeric",8,"Imputation flag for NUMCFAN","1
+0","Imputed
+Not imputed",,,,
+"NUMFLOORFAN","Numeric",8,"Number of floor, window, or table fans used","0 - 15","Number of floor, window, or table fans used","NEC",,,
+"ZNUMFLOORFAN","Numeric",8,"Imputation flag for NUMFLOORFAN","1
+0","Imputed
+Not imputed",,,,
+"NUMWHOLEFAN","Numeric",8,"Number of whole house fans used","0 - 15
+-2","Number of whole house fans used
+Not applicable","NEC",,,
+"ZNUMWHOLEFAN","Numeric",8,"Imputation flag for NUMWHOLEFAN","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NUMATTICFAN","Numeric",8,"Number of attic fans used","0 - 15
+-2","Number of attic fans used
+Not applicable","NEC",,,
+"ZNUMATTICFAN","Numeric",8,"Imputation flag for NUMATTICFAN","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NOTMOIST","Numeric",8,"Dehumidifier used","1
+0","Yes
+No",,,,
+"ZNOTMOIST","Numeric",8,"Imputation flag for NOTMOIST","1
+0","Imputed
+Not imputed",,,,
+"USENOTMOIST","Numeric",8,"Number of months dehumidifier used in last year","0 - 12
+-2","Number of months dehumidifier used in last year
+Not applicable","DHUM",,,
+"ZUSENOTMOIST","Numeric",8,"Imputation flag for USENOTMOIST","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELH2O","Numeric",8,"Fuel used by main water heater","1
+2
+3
+5
+7
+8
+21","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Wood (cordwood or pellets)
+Solar
+Some other fuel","WTH","WTH","WTH","WTH"
+"ZFUELH2O","Numeric",8,"Imputation flag for FUELH2O","1
+0","Imputed
+Not imputed",,,,
+"H2OHEATAPT","Numeric",8,"Water heater in apartment or other part of building","1
+2
+-2","In apartment 
+Somewhere else in building
+Not applicable",,,,
+"ZH2OHEATAPT","Numeric",8,"Imputation flag for H2OHEATAPT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WHEATAGE","Numeric",8,"Main water heater age","1
+2
+3
+41
+42
+5
+-2","Less than 2 years old
+2 to 4 years old
+5 to 9 years old
+10 to 14 years old
+15 to 19 years old
+20 years or older
+Not applicable",,,,
+"ZWHEATAGE","Numeric",8,"Imputation flag for WHEATAGE","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WHEATSIZ","Numeric",8,"Main water heater size","1
+2
+3
+4
+-2","Small storage tank (30 gallons or less) 
+Medium storage tank  (31 to 49 gallons) 
+Large storage tank  (50 gallons or more) 
+Tankless or on-demand
+Not applicable","WTH","WTH","WTH","WTH"
+"ZWHEATSIZ","Numeric",8,"Imputation flag for WHEATSIZ","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"MORETHAN1H2O","Numeric",8,"More than one water heater","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZMORETHAN1H2O","Numeric",8,"Imputation flag for MORETHAN1H2O","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FUELH2O2","Numeric",8,"Fuel used by secondary water heater","1
+2
+3
+5
+7
+8
+21
+-2","Natural gas from underground pipes
+Propane (bottled gas)
+Fuel oil/kerosene
+Electricity
+Wood (cordwood or pellets)
+Solar
+Some other fuel
+Not applicable","WTH","WTH","WTH","WTH"
+"ZFUELH2O2","Numeric",8,"Imputation flag for FUELH2O2","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"LGTINNUM","Numeric",8,"Number of light bulbs installed inside the home","1
+2
+3
+4
+5","Fewer than 20 light bulbs
+20 to 39 light bulbs
+40 to 59 light bulbs
+60 to 79 light bulbs
+80 or more light bulbs","LGT",,,
+"ZLGTINNUM","Numeric",8,"Imputation flag for LGTINNUM","1
+0","Imputed
+Not imputed",,,,
+"LGTIN4","Numeric",8,"Number of inside light bulbs turned on at least 4 hours a day","0 - 99","Number of inside light bulbs turned on at least 4 hours a day","LGT",,,
+"ZLGTIN4","Numeric",8,"Imputation flag for LGTIN4","1
+0","Imputed
+Not imputed",,,,
+"LGTINCAN","Numeric",8,"Portion of inside light bulbs that are incandescent","1
+2
+3
+4
+0","All
+Most
+About half
+Some
+None","LGT",,,
+"ZLGTINCAN","Numeric",8,"Imputation flag for LGTINCAN","1
+0","Imputed
+Not imputed",,,,
+"LGTINCFL","Numeric",8,"Portion of inside light bulbs that are CFL","1
+2
+3
+4
+0","All
+Most
+About half
+Some
+None","LGT",,,
+"ZLGTINCFL","Numeric",8,"Imputation flag for LGTINCFL","1
+0","Imputed
+Not imputed",,,,
+"LGTINLED","Numeric",8,"Portion of inside light bulbs that are LED","1
+2
+3
+4
+0","All
+Most
+About half
+Some
+None","LGT",,,
+"ZLGTINLED","Numeric",8,"Imputation flag for LGTINLED","1
+0","Imputed
+Not imputed",,,,
+"LGTINCNTL","Numeric",8,"Inside light bulbs controlled by timers or dimmer switches","1
+0","Yes
+No",,,,
+"ZLGTINCNTL","Numeric",8,"Imputation flag for LGTINCNTL","1
+0","Imputed
+Not imputed",,,,
+"LGTOUTNUM","Numeric",8,"Number of light bulbs installed outside the home","0
+1
+2
+3
+-2","None
+1 to 4 bulbs
+5 to 9 bulbs
+10 or more bulbs
+Not applicable","LGT",,,
+"ZLGTOUTNUM","Numeric",8,"Imputation flag for LGTOUTNUM","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"LGTOUTCNTL","Numeric",8,"Outside light bulbs controlled by motion detectors or light sensors","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZLGTOUTCNTL","Numeric",8,"Imputation flag for LGTOUTCNTL","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"AUDIT","Numeric",8,"Home energy audit","1
+0
+-8
+-9","Yes
+No
+Refused
+Don’t know",,,,
+"AUDITCHG","Numeric",8,"Made changes suggested by home energy auditor","1
+0
+-2
+-9","Yes
+No
+Not applicable
+Don’t know",,,,
+"EELIGHTS","Numeric",8,"Received free or subsidized energy-efficient light bulbs","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"FREEAUDIT","Numeric",8,"Received free or subsidized home energy audit","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"REBATEAPP","Numeric",8,"Received utility or energy supplier rebate for new appliance or equipment","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"RECYCAPP","Numeric",8,"Received free recycling of old appliance or equipment (for example, a refrigerator)","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"TAXCREDITAPP","Numeric",8,"Received tax credit for new appliance or equipment","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"BENOTHER","Numeric",8,"Received some other energy-related benefit or assistance","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"ESCWASH","Numeric",8,"Energy Star qualified clothes washer","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know","CW",,,
+"ESDISHW","Numeric",8,"Energy Star qualified dishwasher","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know","DWH",,,
+"ESDRYER","Numeric",8,"Energy Star qualified clothes dryer","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"ESFREEZE","Numeric",8,"Energy Star qualified freezer","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"ESFRIG","Numeric",8,"Energy Star qualified refrigerator","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know","RFG",,,
+"ESLIGHT","Numeric",8,"Energy Star qualified lightbulbs","1
+0
+-8
+-9","Yes
+No
+Refused
+Don’t know",,,,
+"ESWATER","Numeric",8,"Energy Star qualified water heating","1
+0
+-8
+-9","Yes
+No
+Refused
+Don’t know",,,,
+"ESWIN","Numeric",8,"Energy Star qualified windows","1
+0
+-8
+-9","Yes
+No
+Refused
+Don’t know",,,,
+"SMARTTHERM","Numeric",8,"Smart thermostat","1
+0
+-2
+-9","Yes
+No
+Not applicable
+Don't know",,,,
+"ELPAY","Numeric",8,"Who pays for electricity","1
+2
+3
+9","Household is responsible for paying for all used in this home
+All used in this home is included in the rent or condo fee
+Some is paid by the household, some is included in the rent or condo fee
+Paid for some other way",,,,
+"ZELPAY","Numeric",8,"Imputation flag for ELPAY","1
+0","Imputed
+Not imputed",,,,
+"NGPAY","Numeric",8,"Who pays for natural gas","1
+2
+3
+9
+-2","Household is responsible for paying for all used in this home
+All used in this home is included in the rent or condo fee
+Some is paid by the household, some is included in the rent or condo fee
+Paid for some other way
+Not applicable",,,,
+"ZNGPAY","Numeric",8,"Imputation flag for NGPAY","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"LPGPAY","Numeric",8,"Who pays for propane","1
+2
+3
+9
+-2","Household is responsible for paying for all used in this home
+All used in this home is included in the rent or condo fee
+Some is paid by the household, some is included in the rent or condo fee
+Paid for some other way
+Not applicable",,,,
+"ZLPGPAY","Numeric",8,"Imputation flag for LPGPAY","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"FOPAY","Numeric",8,"Who pays for fuel oil","1
+2
+3
+9
+-2","Household is responsible for paying for all used in this home
+All used in this home is included in the rent or condo fee
+Some is paid by the household, some is included in the rent or condo fee
+Paid for some other way
+Not applicable",,,,
+"ZFOPAY","Numeric",8,"Imputation flag for FOPAY","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SMARTMETER","Numeric",8,"Home has an electricity smart meter","1
+0
+-8
+-9","Yes
+No
+Refused
+Don’t know",,,,
+"INTDATA","Numeric",8,"Household has access to smart meter interval data","1
+0
+-2
+-8
+-9","Yes
+No
+Not applicable
+Refused
+Don’t know",,,,
+"INTDATAACC","Numeric",8,"Household member has viewed smart meter interval data","1
+0
+-2
+-9","Yes
+No
+Not applicable
+Don’t know",,,,
+"HHSEX","Numeric",8,"Respondent sex","1
+2","Female
+Male",,,,
+"ZHHSEX","Numeric",8,"Imputation flag for HHSEX","1
+0","Imputed
+Not imputed",,,,
+"HHAGE","Numeric",8,"Respondent age","18 - 110","Respondent age",,,,
+"ZHHAGE","Numeric",8,"Imputation flag for HHAGE","1
+0","Imputed
+Not imputed",,,,
+"EMPLOYHH","Numeric",8,"Respondent employment status","1
+2
+0","Employed full-time
+Employed part-time
+Not employed/retired",,,,
+"ZEMPLOYHH","Numeric",8,"Imputation flag for EMPLOYHH","1
+0","Imputed
+Not imputed",,,,
+"SDESCENT","Numeric",8,"Respondent is Hispanic or Latino","1
+0","Yes
+No",,,,
+"ZSDESCENT","Numeric",8,"Imputation flag for SDESCENT","1
+0","Imputed
+Not imputed",,,,
+"HOUSEHOLDER_RACE","Numeric",8,"Householder (respondent) race","1
+2
+3
+4
+5
+6
+7","White Alone
+Black or African/American Alone
+American Indian or Alaska Native Alone
+Asian Alone
+Native Hawaiian or Other Pacific Islander Alone
+Some Other Race Alone
+2 or More Races Selected",,,,
+"ZHOUSEHOLDER_RACE","Numeric",8,"Imputation flag for HOUSEHOLDER_RACE","1
+0","Imputed
+Not imputed",,,,
+"EDUCATION","Numeric",8,"Highest education completed by respondent","1
+2
+3
+4
+5","Less than high school diploma or GED
+High school diploma or GED
+Some college or Associate’s degree
+Bachelor’s degree (for example: BA, BS)
+Master’s, Professional, or Doctorate degree (for example: MA, MS, MBA, MD, JD, PhD)",,,,
+"ZEDUCATION","Numeric",8,"Imputation flag for EDUCATION","1
+0","Imputed
+Not imputed",,,,
+"NHSLDMEM","Numeric",8,"Number of household members","1 - 20","Number of household members","WTH","WTH","WTH","WTH"
+"ZNHSLDMEM","Numeric",8,"Imputation flag for NHSLDMEM","1
+0","Imputed
+Not imputed",,,,
+"NUMADULT","Numeric",8,"Number of household members age 18 or older","1 - 20","Number of household members age 18 or older",,,,
+"ZNUMADULT","Numeric",8,"Imputation flag for NUMADULT","1
+0","Imputed
+Not imputed",,,,
+"NUMCHILD","Numeric",8,"Number of household members age 17 or younger","0 - 20","Number of household members age 17 or younger",,,,
+"ZNUMCHILD","Numeric",8,"Imputation flag for NUMCHILD","1
+0","Imputed
+Not imputed",,,,
+"ATHOME","Numeric",8,"Number of weekdays someone is at home","0 - 5","Number of weekdays someone is at home","SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZATHOME","Numeric",8,"Imputation flag for ATHOME","1
+0","Imputed
+Not imputed",,,,
+"MONEYPY","Numeric",8,"Annual gross household income for the last year","1
+2
+3
+4
+5
+6
+7
+8","Less than $20,000
+$20,000 - $39,999
+$40,000 - $59,999
+$60,000 to $79,999
+$80,000 to $99,999
+$100,000 to $119,999
+$120,000 to $139,999
+$140,000 or more",,,,
+"ZMONEYPY","Numeric",8,"Imputation flag for MONEYPY","1
+0","Imputed
+Not imputed",,,,
+"ENERGYASST","Numeric",8,"Participated in home energy assistance program","1
+0","Yes
+No",,,,
+"ZENERGYASST","Numeric",8,"Imputation flag for ENERGYASST","1
+0","Imputed
+Not imputed",,,,
+"ENERGYASST11","Numeric",8,"Received home energy assistance in 2011","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASST11","Numeric",8,"Imputation flag for ENERGYASST11","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ENERGYASST12","Numeric",8,"Received home energy assistance in 2012","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASST12","Numeric",8,"Imputation flag for ENERGYASST12","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ENERGYASST13","Numeric",8,"Received home energy assistance in 2013","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASST13","Numeric",8,"Imputation flag for ENERGYASST13","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ENERGYASST14","Numeric",8,"Received home energy assistance in 2014","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASST14","Numeric",8,"Imputation flag for ENERGYASST14","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ENERGYASST15","Numeric",8,"Received home energy assistance in 2015","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASST15","Numeric",8,"Imputation flag for ENERGYASST15","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"ENERGYASSTOTH","Numeric",8,"Received home energy assistance in some other year","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZENERGYASSTOTH","Numeric",8,"Imputation flag for ENERGYASSTOTH","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"SCALEB","Numeric",8,"Frequency of reducing or forgoing basic necessities due to home energy bill","1
+2
+3
+0","Almost every month
+Some months
+1 or 2 months
+Never",,,,
+"ZSCALEB","Numeric",8,"Imputation flag for SCALEB","1
+0","Imputed
+Not imputed",,,,
+"SCALEG","Numeric",8,"Frequency of keeping home at unhealthy temperature","1
+2
+3
+0","Almost every month
+Some months
+1 or 2 months
+Never",,,,
+"ZSCALEG","Numeric",8,"Imputation flag for SCALEG","1
+0","Imputed
+Not imputed",,,,
+"SCALEE","Numeric",8,"Frequency of receiving disconnect notice","1
+2
+3
+0","Almost every month
+Some months
+1 or 2 months
+Never",,,,
+"ZSCALEE","Numeric",8,"Imputation flag for SCALEE","1
+0","Imputed
+Not imputed",,,,
+"PAYHELP","Numeric",8,"Received energy assistance to help pay energy bills after disconnect notice","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZPAYHELP","Numeric",8,"Imputation flag for PAYHELP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NOHEATBROKE","Numeric",8,"Unable to use heating equipment in the last year because equipment was broken and could not afford repair or replacement","1
+0","Yes
+No",,,,
+"ZNOHEATBROKE","Numeric",8,"Imputation flag for NOHEATBROKE","1
+0","Imputed
+Not imputed",,,,
+"NOHEATEL","Numeric",8,"Unable to use heating equipment in the last year because could not afford electricity and it was disconnected","1
+0","Yes
+No",,,,
+"ZNOHEATEL","Numeric",8,"Imputation flag for NOHEATEL","1
+0","Imputed
+Not imputed",,,,
+"NOHEATNG","Numeric",8,"Unable to use heating equipment in the last year because could not afford natural gas and it was disconnected","1
+0","Yes
+No",,,,
+"ZNOHEATNG","Numeric",8,"Imputation flag for NOHEATNG","1
+0","Imputed
+Not imputed",,,,
+"NOHEATBULK","Numeric",8,"Unable to use heating equipment in the last year because could not afford bulk fuel delivery","1
+0","Yes
+No",,,,
+"ZNOHEATBULK","Numeric",8,"Imputation flag for NOHEATBULK","1
+0","Imputed
+Not imputed",,,,
+"NOHEATDAYS","Numeric",8,"Number of days unable to use heating equipment in the last year","1 - 365
+-2","Number of days unable to use heating equipment in the last year
+Not applicable",,,,
+"ZNOHEATDAYS","Numeric",8,"Imputation flag for NOHEATDAYS","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NOHEATHELP","Numeric",8,"Received energy assistance to help restore heating","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZNOHEATHELP","Numeric",8,"Imputation flag for NOHEATHELP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"COLDMA","Numeric",8,"Medical attention needed because home was too cold","1
+0","Yes
+No",,,,
+"ZCOLDMA","Numeric",8,"Imputation flag for COLDMA","1
+0","Imputed
+Not imputed",,,,
+"NOACBROKE","Numeric",8,"Unable to use cooling equipment in the last year because equipment was broken and could not afford repair or replacement","1
+0","Yes
+No",,,,
+"ZNOACBROKE","Numeric",8,"Imputation flag for NOACBROKE","1
+0","Imputed
+Not imputed",,,,
+"NOACEL","Numeric",8,"Unable to use cooling equipment in the last year because could not afford electricity and it was disconnected","1
+0","Yes
+No",,,,
+"ZNOACEL","Numeric",8,"Imputation flag for NOACEL","1
+0","Imputed
+Not imputed",,,,
+"NOACDAYS","Numeric",8,"Number of days unable to use cooling equipment in the last year","1 - 365
+-2","Number of days unable to use cooling equipment in the last year
+Not applicable",,,,
+"ZNOACDAYS","Numeric",8,"Imputation flag for NOACDAYS","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"NOACHELP","Numeric",8,"Received energy assistance to help restore cooling","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZNOACHELP","Numeric",8,"Imputation flag for NOACHELP","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"HOTMA","Numeric",8,"Medical attention needed because home was too hot","1
+0","Yes
+No",,,,
+"ZHOTMA","Numeric",8,"Imputation flag for HOTMA","1
+0","Imputed
+Not imputed",,,,
+"USEEL","Numeric",8,"Electricity used","1
+0","Yes
+No",,,,
+"ELWARM","Numeric",8,"Electricity used for space heating","1
+0","Yes
+No",,,,
+"ELCOOL","Numeric",8,"Electricity used for air conditioning","1
+0","Yes
+No","COL, AHUCOL",,,
+"ELWATER","Numeric",8,"Electricity used for water heating","1
+0","Yes
+No",,,,
+"ELFOOD","Numeric",8,"Electricity used for cooking","1
+0","Yes
+No",,,,
+"ELOTHER","Numeric",8,"Electricity used, other than for space heating, water heating, air conditioning, or cooking","1
+0","Yes
+No",,,,
+"USENG","Numeric",8,"Natural gas used","1
+0","Yes
+No",,,,
+"UGWARM","Numeric",8,"Natural gas used for space heating","1
+0","Yes
+No",,,,
+"UGWATER","Numeric",8,"Natural gas used for water heating","1
+0","Yes
+No",,,,
+"UGCOOK","Numeric",8,"Natural gas used for cooking","1
+0","Yes
+No",,,,
+"UGOTH","Numeric",8,"Natural gas used, other than for space heating, water heating, or cooking","1
+0","Yes
+No",,,,
+"USELP","Numeric",8,"Propane used","1
+0","Yes
+No",,,,
+"LPWARM","Numeric",8,"Propane used for space heating","1
+0","Yes
+No",,,,
+"LPWATER","Numeric",8,"Propane used for water heating","1
+0","Yes
+No",,,,
+"LPCOOK","Numeric",8,"Propane used for cooking","1
+0","Yes
+No",,,,
+"LPOTHER","Numeric",8,"Propane used, other than for space heating, water heating, or cooking","1
+0","Yes
+No",,,,
+"USEFO","Numeric",8,"Fuel oil used","1
+0","Yes
+No",,,,
+"FOWARM","Numeric",8,"Fuel oil used for space heating","1
+0","Yes
+No",,,,
+"FOWATER","Numeric",8,"Fuel oil used for water heating","1
+0","Yes
+No",,,,
+"FOOTHER","Numeric",8,"Fuel oil used, other than for space heating or water heating","1
+0","Yes
+No",,,,
+"USEWOOD","Numeric",8,"Wood used (cordwood or pellets)","1
+0","Yes
+No",,,,
+"WOODLOGS","Numeric",8,"Wood logs (cordwood) used","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZWOODLOGS","Numeric",8,"Imputation flag for WOODLOGS","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WDPELLET","Numeric",8,"Wood pellets used","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"ZWDPELLET","Numeric",8,"Imputation flag for WDPELLET","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WDOTHER","Numeric",8,"Type of wood used other than logs, pellets, or scraps","1
+0
+-2","Yes
+No
+Not applicable",,,,
+"WDWARM","Numeric",8,"Wood (cordwood or pellets) used for space heating","1
+0","Yes
+No",,,,
+"WDWATER","Numeric",8,"Wood (cordwood or pellets) used for water heating","1
+0","Yes
+No",,,,
+"USESOLAR","Numeric",8,"Solar used","1
+0","Yes
+No",,,,
+"SOLWATER","Numeric",8,"Solar used for water heating","1
+0","Yes
+No",,,,
+"SOLOTHER","Numeric",8,"Solar used, other than for water heating","1
+0","Yes
+No",,,,
+"TOTCSQFT","Numeric",8,"Total cooled square footage",,,,,,
+"TOTHSQFT","Numeric",8,"Total heated square footage",,,,,,
+"TOTSQFT_EN","Numeric",8,"Total square footage (used for publication)",,,"SPH, AHUHEAT, COL, AHUCOL","SPH","SPH","SPH"
+"ZTOTSQFT_EN","Numeric",8,"Imputation flag for TOTSQFT_EN","1
+0","Imputed
+Not imputed",,,,
+"TOTUCSQFT","Numeric",8,"Total uncooled square footage",,,,,,
+"TOTUSQFT","Numeric",8,"Total unheated square footage",,,,,,
+"NWEIGHT","Numeric",8,"Final sample weight",,,,,,
+"BRRWT1","Numeric",8,"Replicate weight 1",,,,,,
+"BRRWT2","Numeric",8,"Replicate weight 2",,,,,,
+"BRRWT3","Numeric",8,"Replicate weight 3",,,,,,
+"BRRWT4","Numeric",8,"Replicate weight 4",,,,,,
+"BRRWT5","Numeric",8,"Replicate weight 5",,,,,,
+"BRRWT6","Numeric",8,"Replicate weight 6",,,,,,
+"BRRWT7","Numeric",8,"Replicate weight 7",,,,,,
+"BRRWT8","Numeric",8,"Replicate weight 8",,,,,,
+"BRRWT9","Numeric",8,"Replicate weight 9",,,,,,
+"BRRWT10","Numeric",8,"Replicate weight 10",,,,,,
+"BRRWT11","Numeric",8,"Replicate weight 11",,,,,,
+"BRRWT12","Numeric",8,"Replicate weight 12",,,,,,
+"BRRWT13","Numeric",8,"Replicate weight 13",,,,,,
+"BRRWT14","Numeric",8,"Replicate weight 14",,,,,,
+"BRRWT15","Numeric",8,"Replicate weight 15",,,,,,
+"BRRWT16","Numeric",8,"Replicate weight 16",,,,,,
+"BRRWT17","Numeric",8,"Replicate weight 17",,,,,,
+"BRRWT18","Numeric",8,"Replicate weight 18",,,,,,
+"BRRWT19","Numeric",8,"Replicate weight 19",,,,,,
+"BRRWT20","Numeric",8,"Replicate weight 20",,,,,,
+"BRRWT21","Numeric",8,"Replicate weight 21",,,,,,
+"BRRWT22","Numeric",8,"Replicate weight 22",,,,,,
+"BRRWT23","Numeric",8,"Replicate weight 23",,,,,,
+"BRRWT24","Numeric",8,"Replicate weight 24",,,,,,
+"BRRWT25","Numeric",8,"Replicate weight 25",,,,,,
+"BRRWT26","Numeric",8,"Replicate weight 26",,,,,,
+"BRRWT27","Numeric",8,"Replicate weight 27",,,,,,
+"BRRWT28","Numeric",8,"Replicate weight 28",,,,,,
+"BRRWT29","Numeric",8,"Replicate weight 29",,,,,,
+"BRRWT30","Numeric",8,"Replicate weight 30",,,,,,
+"BRRWT31","Numeric",8,"Replicate weight 31",,,,,,
+"BRRWT32","Numeric",8,"Replicate weight 32",,,,,,
+"BRRWT33","Numeric",8,"Replicate weight 33",,,,,,
+"BRRWT34","Numeric",8,"Replicate weight 34",,,,,,
+"BRRWT35","Numeric",8,"Replicate weight 35",,,,,,
+"BRRWT36","Numeric",8,"Replicate weight 36",,,,,,
+"BRRWT37","Numeric",8,"Replicate weight 37",,,,,,
+"BRRWT38","Numeric",8,"Replicate weight 38",,,,,,
+"BRRWT39","Numeric",8,"Replicate weight 39",,,,,,
+"BRRWT40","Numeric",8,"Replicate weight 40",,,,,,
+"BRRWT41","Numeric",8,"Replicate weight 41",,,,,,
+"BRRWT42","Numeric",8,"Replicate weight 42",,,,,,
+"BRRWT43","Numeric",8,"Replicate weight 43",,,,,,
+"BRRWT44","Numeric",8,"Replicate weight 44",,,,,,
+"BRRWT45","Numeric",8,"Replicate weight 45",,,,,,
+"BRRWT46","Numeric",8,"Replicate weight 46",,,,,,
+"BRRWT47","Numeric",8,"Replicate weight 47",,,,,,
+"BRRWT48","Numeric",8,"Replicate weight 48",,,,,,
+"BRRWT49","Numeric",8,"Replicate weight 49",,,,,,
+"BRRWT50","Numeric",8,"Replicate weight 50",,,,,,
+"BRRWT51","Numeric",8,"Replicate weight 51",,,,,,
+"BRRWT52","Numeric",8,"Replicate weight 52",,,,,,
+"BRRWT53","Numeric",8,"Replicate weight 53",,,,,,
+"BRRWT54","Numeric",8,"Replicate weight 54",,,,,,
+"BRRWT55","Numeric",8,"Replicate weight 55",,,,,,
+"BRRWT56","Numeric",8,"Replicate weight 56",,,,,,
+"BRRWT57","Numeric",8,"Replicate weight 57",,,,,,
+"BRRWT58","Numeric",8,"Replicate weight 58",,,,,,
+"BRRWT59","Numeric",8,"Replicate weight 59",,,,,,
+"BRRWT60","Numeric",8,"Replicate weight 60",,,,,,
+"BRRWT61","Numeric",8,"Replicate weight 61",,,,,,
+"BRRWT62","Numeric",8,"Replicate weight 62",,,,,,
+"BRRWT63","Numeric",8,"Replicate weight 63",,,,,,
+"BRRWT64","Numeric",8,"Replicate weight 64",,,,,,
+"BRRWT65","Numeric",8,"Replicate weight 65",,,,,,
+"BRRWT66","Numeric",8,"Replicate weight 66",,,,,,
+"BRRWT67","Numeric",8,"Replicate weight 67",,,,,,
+"BRRWT68","Numeric",8,"Replicate weight 68",,,,,,
+"BRRWT69","Numeric",8,"Replicate weight 69",,,,,,
+"BRRWT70","Numeric",8,"Replicate weight 70",,,,,,
+"BRRWT71","Numeric",8,"Replicate weight 71",,,,,,
+"BRRWT72","Numeric",8,"Replicate weight 72",,,,,,
+"BRRWT73","Numeric",8,"Replicate weight 73",,,,,,
+"BRRWT74","Numeric",8,"Replicate weight 74",,,,,,
+"BRRWT75","Numeric",8,"Replicate weight 75",,,,,,
+"BRRWT76","Numeric",8,"Replicate weight 76",,,,,,
+"BRRWT77","Numeric",8,"Replicate weight 77",,,,,,
+"BRRWT78","Numeric",8,"Replicate weight 78",,,,,,
+"BRRWT79","Numeric",8,"Replicate weight 79",,,,,,
+"BRRWT80","Numeric",8,"Replicate weight 80",,,,,,
+"BRRWT81","Numeric",8,"Replicate weight 81",,,,,,
+"BRRWT82","Numeric",8,"Replicate weight 82",,,,,,
+"BRRWT83","Numeric",8,"Replicate weight 83",,,,,,
+"BRRWT84","Numeric",8,"Replicate weight 84",,,,,,
+"BRRWT85","Numeric",8,"Replicate weight 85",,,,,,
+"BRRWT86","Numeric",8,"Replicate weight 86",,,,,,
+"BRRWT87","Numeric",8,"Replicate weight 87",,,,,,
+"BRRWT88","Numeric",8,"Replicate weight 88",,,,,,
+"BRRWT89","Numeric",8,"Replicate weight 89",,,,,,
+"BRRWT90","Numeric",8,"Replicate weight 90",,,,,,
+"BRRWT91","Numeric",8,"Replicate weight 91",,,,,,
+"BRRWT92","Numeric",8,"Replicate weight 92",,,,,,
+"BRRWT93","Numeric",8,"Replicate weight 93",,,,,,
+"BRRWT94","Numeric",8,"Replicate weight 94",,,,,,
+"BRRWT95","Numeric",8,"Replicate weight 95",,,,,,
+"BRRWT96","Numeric",8,"Replicate weight 96",,,,,,
+"CDD30YR","Numeric",8,"Cooling degree days, 30-year average 1981-2010, base temperature 65F",,,,,,
+"CDD65","Numeric",8,"Cooling degree days in 2015, base temperature 65F",,,"COL, AHUCOL, EVAPCOL",,,
+"CDD80","Numeric",8,"Cooling degree days in 2015, base temperature 80F (used for garage cooling load estimation only)",,,"COL",,,
+"CLIMATE_REGION_PUB","Character",18,"Building America Climate Zone",,"Cold/Very Cold
+Hot-Dry/Mixed-Dry
+Hot-Humid
+Mixed-Humid
+Marine",,,,
+"IECC_CLIMATE_PUB","Character",18,"IECC Climate Code","1A-2A
+2B
+3A
+3B-4B
+3C
+4A
+4C
+5A
+5B-5C
+6A-6B
+7A-7B-7AK-8AK","IECC climate zones 1A-2A
+IECC climate zone 2B
+IECC climate zone 3A
+IECC climate zones 3B-4B
+IECC climate zone 3C
+IECC climate zone 4A
+IECC climate zone 4C
+IECC climate zone 5A
+IECC climate zones 5B-5C
+IECC climate zones 6A-6B
+IECC climate zones 7A-7B-7AK-8AK","SPH, COL","SPH","SPH","SPH"
+"HDD30YR","Numeric",8,"Heating degree days, 30-year average 1981-2010, base temperature 65F",,,,,,
+"HDD65","Numeric",8,"Heating degree days in 2015, base temperature 65F",,,"SPH","SPH","SPH","SPH"
+"HDD50","Numeric",8,"Heating degree days in 2015, base temperature 50F (used for garage heating load estimation only)",,,"SPH","SPH","SPH","SPH"
+"GNDHDD65","Numeric",8,"Heating degree days of ground temperature in 2015, base temperature 65F",,,"SPH","SPH","SPH","SPH"
+"WSF","Numeric",8,"Weather & Shielding Factor for the housing unit",,,"SPH, COL","SPH","SPH","SPH"
+"OA_LAT","Numeric",8,"Annual value for latent heat infiltration from outside air into the housing unit",,,"COL",,,
+"GWT","Numeric",8,"Annual average ground water temperature (F) for 2015",,,"WTH","WTH","WTH","WTH"
+"DBT1","Numeric",8,"Dry bulb design temperature (F) expected to be exceeded 1% of the time",,,"COL",,,
+"DBT99","Numeric",8,"Dry bulb design temperature (F) expected to be exceeded 99% of the time",,,"SPH","SPH","SPH","SPH"
+"KWH","Numeric",8,"Total site electricity usage, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHSPH","Numeric",8,"Electricity usage for space heating, main and secondary, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHCOL","Numeric",8,"Electricity usage for air conditioning (central systems and individual units), in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHWTH","Numeric",8,"Electricity usage for water heating, main and secondary, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHRFG","Numeric",8,"Electricity usage for all refrigerators, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHRFG1","Numeric",8,"Electricity usage for first refrigerators, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHRFG2","Numeric",8,"Electricity usage for second refrigerators, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHFRZ","Numeric",8,"Electricity usage for freezers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHCOK","Numeric",8,"Electricity usage for cooking (stoves, cooktops, and ovens), in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHMICRO","Numeric",8,"Electricity usage for microwaves, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHCW","Numeric",8,"Electricity usage for clothes washers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHCDR","Numeric",8,"Electricity usage for clothes dryers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHDWH","Numeric",8,"Electricity usage for dishwashers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHLGT","Numeric",8,"Electricity usage for indoor and outdoor lighting, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHTVREL","Numeric",8,"Electricity usage for all televisions and related peripherals, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHTV1","Numeric",8,"Electricity usage for first televisions, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHTV2","Numeric",8,"Electricity usage for second televisions, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHAHUHEAT","Numeric",8,"Electricity usage for air handlers and boiler pumps used for heating, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHAHUCOL","Numeric",8,"Electricity usage for air handlers used for cooling, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHEVAPCOL","Numeric",8,"Electricity usage for evaporative coolers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHCFAN","Numeric",8,"Electricity usage for ceiling fans, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHDHUM","Numeric",8,"Electricity usage for dehumidifiers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHHUM","Numeric",8,"Electricity usage for humidifiers, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHPLPMP","Numeric",8,"Electricity usage for swimming pool pumps, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHHTBPMP","Numeric",8,"Electricity usage for hot tub pumps, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHHTBHEAT","Numeric",8,"Electricity usage for hot tub heaters, in kilowatthours, 2015",,"Kilowatthours",,,,
+"KWHNEC","Numeric",8,"Electricity usage for other devices and purposes not elsewhere classified, in kilowatthours, 2015",,"Kilowatthours",,,,
+"BTUEL","Numeric",8,"Total site electricity usage, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELSPH","Numeric",8,"Electricity usage for space heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELCOL","Numeric",8,"Electricity usage for air conditioning (central systems and individual units), in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELWTH","Numeric",8,"Electricity usage for water heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELRFG","Numeric",8,"Electricity usage for all refrigerators, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELRFG1","Numeric",8,"Electricity usage for first refrigerators, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELRFG2","Numeric",8,"Electricity usage for second refrigerators, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELFRZ","Numeric",8,"Electricity usage for freezers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELCOK","Numeric",8,"Electricity usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELMICRO","Numeric",8,"Electricity usage for microwaves, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELCW","Numeric",8,"Electricity usage for clothes washers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELCDR","Numeric",8,"Electricity usage for clothes dryers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELDWH","Numeric",8,"Electricity usage for dishwashers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELLGT","Numeric",8,"Electricity usage for indoor and outdoor lighting, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELTVREL","Numeric",8,"Electricity usage for all televisions and related peripherals, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELTV1","Numeric",8,"Electricity usage for first televisions, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELTV2","Numeric",8,"Electricity usage for second televisions, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELAHUHEAT","Numeric",8,"Electricity usage for air handlers and boiler pumps used for heating, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELAHUCOL","Numeric",8,"Electricity usage for air handlers used for cooling, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELEVAPCOL","Numeric",8,"Electricity usage for evaporative coolers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELCFAN","Numeric",8,"Electricity usage for ceiling fans, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELDHUM","Numeric",8,"Electricity usage for dehumidifiers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELHUM","Numeric",8,"Electricity usage for humidifiers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELPLPMP","Numeric",8,"Electricity usage for swimming pool pumps, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELHTBPMP","Numeric",8,"Electricity usage for hot tub pumps, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELHTBHEAT","Numeric",8,"Electricity usage for hot tub heaters, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUELNEC","Numeric",8,"Electricity usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"Thousand Btu",,,,
+"DOLLAREL","Numeric",8,"Total electricity cost, in dollars, 2015",,"US Dollars",,,,
+"DOLELSPH","Numeric",8,"Electricity cost for space heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLELCOL","Numeric",8,"Electricity cost for air conditioning (central systems and individual units), in dollars, 2015",,"US Dollars",,,,
+"DOLELWTH","Numeric",8,"Electricity cost for water heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLELRFG","Numeric",8,"Electricity cost for all refrigerators, in dollars, 2015",,"US Dollars",,,,
+"DOLELRFG1","Numeric",8,"Electricity cost for first refrigerators, in dollars, 2015",,"US Dollars",,,,
+"DOLELRFG2","Numeric",8,"Electricity cost for second refrigerators, in dollars, 2015",,"US Dollars",,,,
+"DOLELFRZ","Numeric",8,"Electricity cost for freezers, in dollars, 2015",,"US Dollars",,,,
+"DOLELCOK","Numeric",8,"Electricity cost for cooking (stoves, cooktops, and ovens), in dollars, 2015",,"US Dollars",,,,
+"DOLELMICRO","Numeric",8,"Electricity cost for microwaves, in dollars, 2015",,"US Dollars",,,,
+"DOLELCW","Numeric",8,"Electricity cost for clothes washers, in dollars, 2015",,"US Dollars",,,,
+"DOLELCDR","Numeric",8,"Electricity cost for clothes dryers, in dollars, 2015",,"US Dollars",,,,
+"DOLELDWH","Numeric",8,"Electricity cost for dishwashers, in dollars, 2015",,"US Dollars",,,,
+"DOLELLGT","Numeric",8,"Electricity cost for indoor and outdoor lighting, in dollars, 2015",,"US Dollars",,,,
+"DOLELTVREL","Numeric",8,"Electricity cost for all televisions and related peripherals, in dollars, 2015",,"US Dollars",,,,
+"DOLELTV1","Numeric",8,"Electricity cost for first televisions, in dollars, 2015",,"US Dollars",,,,
+"DOLELTV2","Numeric",8,"Electricity cost for second televisions, in dollars, 2015",,"US Dollars",,,,
+"DOLELAHUHEAT","Numeric",8,"Electricity cost for air handlers and boiler pumps used for heating, in dollars, 2015",,"US Dollars",,,,
+"DOLELAHUCOL","Numeric",8,"Electricity cost for air handlers used for cooling, in dollars, 2015",,"US Dollars",,,,
+"DOLELEVAPCOL","Numeric",8,"Electricity cost for evaporative coolers, in dollars, 2015",,"US Dollars",,,,
+"DOLELCFAN","Numeric",8,"Electricity cost for ceiling fans, in dollars, 2015",,"US Dollars",,,,
+"DOLELDHUM","Numeric",8,"Electricity cost for dehumidifiers, in dollars, 2015",,"US Dollars",,,,
+"DOLELHUM","Numeric",8,"Electricity cost for humidifiers, in dollars, 2015",,"US Dollars",,,,
+"DOLELPLPMP","Numeric",8,"Electricity cost for swimming pool pumps, in dollars, 2015",,"US Dollars",,,,
+"DOLELHTBPMP","Numeric",8,"Electricity cost for hot tub pumps, in dollars, 2015",,"US Dollars",,,,
+"DOLELHTBHEAT","Numeric",8,"Electricity cost for hot tub heaters, in dollars, 2015",,"US Dollars",,,,
+"DOLELNEC","Numeric",8,"Electricity cost for other devices and purposes not elsewhere classified, in dollars, 2015",,"US Dollars",,,,
+"CUFEETNG","Numeric",8,"Total natural gas usage, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGSPH","Numeric",8,"Natural gas usage for space heating, main and secondary, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGWTH","Numeric",8,"Natural gas usage for water heating , main and secondary, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGCOK","Numeric",8,"Natural gas usage for cooking (stoves, cooktops, and ovens), in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGCDR","Numeric",8,"Natural gas usage for clothes dryers, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGPLHEAT","Numeric",8,"Natural gas usage for swimming pool heaters, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGHTBHEAT","Numeric",8,"Natural gas usage for hot tub heaters, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"CUFEETNGNEC","Numeric",8,"Natural gas usage for other devices and purposes not elsewhere classified, in hundred cubic feet, 2015",,"Hundred cubic feet of natural gas",,,,
+"BTUNG","Numeric",8,"Total natural gas usage, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGSPH","Numeric",8,"Natural gas usage for space heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGWTH","Numeric",8,"Natural gas usage for water heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGCOK","Numeric",8,"Natural gas usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGCDR","Numeric",8,"Natural gas usage for clothes dryers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGPLHEAT","Numeric",8,"Natural gas usage for swimming pool heaters, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGHTBHEAT","Numeric",8,"Natural gas usage for hot tub heaters, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUNGNEC","Numeric",8,"Natural gas usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"Thousand Btu",,,,
+"DOLLARNG","Numeric",8,"Total natural gas cost, in dollars, 2015",,"US Dollars",,,,
+"DOLNGSPH","Numeric",8,"Natural Gas cost for space heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLNGWTH","Numeric",8,"Natural gas cost for water heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLNGCOK","Numeric",8,"Natural gas cost for cooking (stoves, cooktops, and ovens), in dollars, 2015",,"US Dollars",,,,
+"DOLNGCDR","Numeric",8,"Natural gas cost for clothes dryers, in dollars, 2015",,"US Dollars",,,,
+"DOLNGPLHEAT","Numeric",8,"Natural gas cost for swimming pool heaters, in dollars, 2015",,"US Dollars",,,,
+"DOLNGHTBHEAT","Numeric",8,"Natural gas cost for hot tub heaters, in dollars, 2015",,"US Dollars",,,,
+"DOLNGNEC","Numeric",8,"Natural gas cost for other devices and purposes not elsewhere classified, in dollars, 2015",,"US Dollars",,,,
+"GALLONLP","Numeric",8,"Total propane usage, in gallons, 2015",,"Gallons of propane",,,,
+"GALLONLPSPH","Numeric",8,"Propane usage for space heating, main and secondary, in gallons, 2015",,"Gallons of propane",,,,
+"GALLONLPWTH","Numeric",8,"Propane usage for water heating, main and secondary, in gallons, 2015",,"Gallons of propane",,,,
+"GALLONLPCOK","Numeric",8,"Propane usage for cooking (stoves, cooktops, and ovens), in gallons, 2015",,"Gallons of propane",,,,
+"GALLONLPCDR","Numeric",8,"Propane usage for clothes dryers, in gallons, 2015",,"Gallons of propane",,,,
+"GALLONLPNEC","Numeric",8,"Propane usage for other devices and purposes not elsewhere classified, in gallons, 2015",,"Gallons of propane",,,,
+"BTULP","Numeric",8,"Total propane usage, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTULPSPH","Numeric",8,"Propane usage for space heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTULPWTH","Numeric",8,"Propane usage for water heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTULPCOK","Numeric",8,"Propane usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTULPCDR","Numeric",8,"Propane usage for clothes dryers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTULPNEC","Numeric",8,"Propane usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"Thousand Btu",,,,
+"DOLLARLP","Numeric",8,"Total cost of propane, in dollars, 2015",,"US Dollars",,,,
+"DOLLPSPH","Numeric",8,"Propane cost for space heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLLPWTH","Numeric",8,"Propane cost for water heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLLPCOK","Numeric",8,"Propane cost for cooking (stoves, cooktops, and ovens), in dollars, 2015",,"US Dollars",,,,
+"DOLLPCDR","Numeric",8,"Propane cost for clothes dryers, in dollars, 2015",,"US Dollars",,,,
+"DOLLPNEC","Numeric",8,"Propane cost for other devices and purposes not elsewhere classified, in dollars, 2015",,"US Dollars",,,,
+"GALLONFO","Numeric",8,"Total fuel oil/kerosene usage, in gallons, 2015",,"Gallons of fuel oil/kerosene",,,,
+"GALLONFOSPH","Numeric",8,"Fuel oil/kerosene usage for space heating, main and secondary, in gallons, 2015",,"Gallons of fuel oil/kerosene",,,,
+"GALLONFOWTH","Numeric",8,"Fuel oil/kerosene usage for water heating, main and secondary, in gallons, 2015",,"Gallons of fuel oil/kerosene",,,,
+"GALLONFONEC","Numeric",8,"Fuel oil/kerosene usage for other devices and purposes not elsewhere classified, in gallons, 2015",,"Gallons of fuel oil/kerosene",,,,
+"BTUFO","Numeric",8,"Total fuel oil/kerosene usage, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUFOSPH","Numeric",8,"Fuel oil/kerosene usage for space heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUFOWTH","Numeric",8,"Fuel oil/kerosene usage for water heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"BTUFONEC","Numeric",8,"Fuel oil/kerosene usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"Thousand Btu",,,,
+"DOLLARFO","Numeric",8,"Total cost of fuel oil/kerosene, in dollars, 2015",,"US Dollars",,,,
+"DOLFOSPH","Numeric",8,"Fuel oil/kerosene cost for space heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLFOWTH","Numeric",8,"Fuel oil/kerosene cost for water heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"DOLFONEC","Numeric",8,"Fuel oil/kerosene cost for other devices and purposes not elsewhere classified, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTU","Numeric",8,"Total usage, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOL","Numeric",8,"Total cost, in dollars, 2015 ",,"US Dollars",,,,
+"TOTALBTUSPH","Numeric",8,"Total usage for space heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLSPH","Numeric",8,"Total cost for space heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUWTH","Numeric",8,"Total usage for water heating, main and secondary, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLWTH","Numeric",8,"Total cost for water heating, main and secondary, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUCOK","Numeric",8,"Total usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLCOK","Numeric",8,"Total cost for cooking (stoves, cooktops, and ovens), in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUCDR","Numeric",8,"Total usage for clothes dryers, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLCDR","Numeric",8,"Total cost for clothes dryers, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUPL","Numeric",8,"Total usage for swimming pool pumps and heaters, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLPL","Numeric",8,"Total cost for swimming pool pumps and heaters, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUHTB","Numeric",8,"Total usage for hot tub pumps and heaters, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLHTB","Numeric",8,"Total cost for hot tub pumps and heaters, in dollars, 2015",,"US Dollars",,,,
+"TOTALBTUNEC","Numeric",8,"Total usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"Thousand Btu",,,,
+"TOTALDOLNEC","Numeric",8,"Total cost for other devices and purposes not elsewhere classified, in thousand Btu, 2015",,"US Dollars",,,,
+"WOODAMT","Numeric",8,"Cords of wood used in the last year","0 - 999
+-2","Number of cords of wood used in the last year
+Not applicable",,,,
+"ZWOODAMT","Numeric",8,"Imputation flag for WOODAMT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"WOODBTU","Numeric",8,"Total cordwood usage, in thousand Btu, 2015 (Wood consumption is not included in TOTALBTU or TOTALDOL)",,"Thousand Btu",,,,
+"PELLETAMT","Numeric",8,"Number of 40-pound wood pellet bags used in the last year","0 - 999
+-2","Number of 40-pound wood pellet bags used in the last year
+Not applicable",,,,
+"ZPELLETAMT","Numeric",8,"Imputation flag for PELLETAMT","1
+0
+-2","Imputed
+Not imputed
+Not applicable",,,,
+"PELLETBTU","Numeric",8,"Total wood pellet usage, in thousand Btu, 2015 (Wood consumption is not included in TOTALBTU or TOTALDOL)",,"Thousand Btu",,,,
+"ELXBTU","Numeric",8,"Kilowatthour to Btu conversion factor, 2015",3.412,"Thousand Btu per kilowatthour",,,,
+"PERIODEL","Numeric",8,"Number of days covered by Energy Supplier Survey electricity billing data and used to calculate annual consumption and expenditures","1
+2
+3
+4
+5","330 days or more
+At least 146, but less than 330 days
+At least 60, but less than 146 days
+Less than 60 days
+No billing data collected or billing data not used",,,,
+"ZELAMOUNT","Numeric",8,"Imputation flag for total electricity usage","1
+0","Imputed (No billing data collected or billing data not used)
+Not imputed",,,,
+"NGXBTU","Numeric",8,"Localized cubic feet to Btu conversion factor, 2015",,"Thousand Btu per cubic feet of natural gas (varies)",,,,
+"PERIODNG","Numeric",8,"Number of days covered by Energy Supplier Survey natural gas billing data and used to calculate annual consumption and expenditures","1
+2
+3
+4
+5
+-2","330 days or more
+At least 146, but less than 330 days
+At least 60, but less than 146 days
+Less than 60 days
+No billing data collected or billing data not used
+Not applicable, no natural gas consumption",,,,
+"ZNGAMOUNT","Numeric",8,"Imputation flag for total natural gas usage","1
+0
+-2","Imputed  (No billing data collected or billing data not used)
+Not imputed
+Not applicable, no natural gas consumption",,,,
+"FOXBTU","Numeric",8,"Fuel oil/kerosene to Btu conversion factor, 2015","137.45 
+135
+135.48, 136.79, 137.37","Thousand Btu per gallons of #2 fuel oil
+Thousand Btu per gallons of kerosene
+Thousand Btu per gallons of other fuels",,,,
+"PERIODFO","Numeric",8,"Number of days covered by Energy Supplier Survey fuel oil/kerosene billing data and used to calculate annual consumption and expenditures","1
+2
+5
+-2","365 days (complete)
+Less than 365 days (incomplete)
+No delivery data collected
+Not applicable, no fuel oil consumption",,,,
+"ZFOAMOUNT","Numeric",8,"Imputation flag for total fuel oil/kerosene usage","1
+0
+-2","Imputed (No billing data collected or billing data not used)
+Not imputed
+Not applicable, no fuel oil consumption",,,,
+"LPXBTU","Numeric",8,"Propane to Btu conversion factor, 2015",91.33,"Thousand Btu per gallons of propane",,,,
+"PERIODLP","Numeric",8,"Number of days covered by Energy Supplier Survey propane billing data and used to calculate annual consumption and expenditures","1
+2
+5
+-2","365 days (complete)
+Less than 365 days (incomplete)
+No delivery data collected
+Not applicable, no propane consumption",,,,
+"ZLPAMOUNT","Numeric",8,"Imputation flag for total propane usage","1
+0
+-2","Imputed (No billing data collected or billing data not used)
+Not imputed
+Not applicable, no propane consumption",,,,
+,,,,,,,,,
+"Note: For each variable used as input for the end-use models, the model it appears in are indicated as follows:
+SPH: Space heating
+AHUHEAT: Air handlers for heating 
+COL: Air conditioning
+AHUCOL: Air handlers for cooling
+EVAPCOL: Evaporative coolers
+FANS: Fans
+DHUM: Dehumidifiers
+HUM: Humidifiers
+WTH: Water heating
+LGT: Lighting
+RFG: Refigerators
+FRZ: Freezers
+DWH: Dishwashers
+COK: Stoves, cooktops, and ovens
+MICRO: Microwaves
+TVREL: Televisions and related
+CW: Clothers washers
+CDR: Clothes dryers
+PLPMP: Pool pumps
+PLHEAT: Pool heaters
+HTBPMP: Hot tub pumps
+HTBHEAT: Hot tub heaters
+NEC: Not elsewhere classified",,,,,,,,,

@@ -1,0 +1,157 @@
+"KWH",	# Numeric	8	Total site electricity usage, in kilowatthours, 2015
+"KWHSPH",	# Numeric	8	Electricity usage for space heating, main and secondary, in kilowatthours, 2015
+"KWHCOL",	# Numeric	8	Electricity usage for air conditioning (central systems and individual units), in kilowatthours, 2015
+"KWHWTH",	# Numeric	8	Electricity usage for water heating, main and secondary, in kilowatthours, 2015
+"KWHRFG",	# Numeric	8	Electricity usage for all refrigerators, in kilowatthours, 2015
+"KWHRFG1",	# Numeric	8	Electricity usage for first refrigerators, in kilowatthours, 2015
+"KWHRFG2",	# Numeric	8	Electricity usage for second refrigerators, in kilowatthours, 2015
+"KWHFRZ",	# Numeric	8	Electricity usage for freezers, in kilowatthours, 2015
+"KWHCOK",	# Numeric	8	Electricity usage for cooking (stoves, cooktops, and ovens), in kilowatthours, 2015
+"KWHMICRO",	# Numeric	8	Electricity usage for microwaves, in kilowatthours, 2015
+"KWHCW",	# Numeric	8	Electricity usage for clothes washers, in kilowatthours, 2015
+"KWHCDR",	# Numeric	8	Electricity usage for clothes dryers, in kilowatthours, 2015
+"KWHDWH",	# Numeric	8	Electricity usage for dishwashers, in kilowatthours, 2015
+"KWHLGT",	# Numeric	8	Electricity usage for indoor and outdoor lighting, in kilowatthours, 2015
+"KWHTVREL",	# Numeric	8	Electricity usage for all televisions and related peripherals, in kilowatthours, 2015
+"KWHTV1",	# Numeric	8	Electricity usage for first televisions, in kilowatthours, 2015
+"KWHTV2",	# Numeric	8	Electricity usage for second televisions, in kilowatthours, 2015
+"KWHAHUHEAT",	# Numeric	8	Electricity usage for air handlers and boiler pumps used for heating, in kilowatthours, 2015
+"KWHAHUCOL",	# Numeric	8	Electricity usage for air handlers used for cooling, in kilowatthours, 2015
+"KWHEVAPCOL",	# Numeric	8	Electricity usage for evaporative coolers, in kilowatthours, 2015
+"KWHCFAN",	# Numeric	8	Electricity usage for ceiling fans, in kilowatthours, 2015
+"KWHDHUM",	# Numeric	8	Electricity usage for dehumidifiers, in kilowatthours, 2015
+"KWHHUM",	# Numeric	8	Electricity usage for humidifiers, in kilowatthours, 2015
+"KWHPLPMP",	# Numeric	8	Electricity usage for swimming pool pumps, in kilowatthours, 2015
+"KWHHTBPMP",	# Numeric	8	Electricity usage for hot tub pumps, in kilowatthours, 2015
+"KWHHTBHEAT",	# Numeric	8	Electricity usage for hot tub heaters, in kilowatthours, 2015
+"KWHNEC",	# Numeric	8	Electricity usage for other devices and purposes not elsewhere classified, in kilowatthours, 2015
+"BTUEL",	# Numeric	8	Total site electricity usage, in thousand Btu, 2015
+"BTUELSPH",	# Numeric	8	Electricity usage for space heating, main and secondary, in thousand Btu, 2015
+"BTUELCOL",	# Numeric	8	Electricity usage for air conditioning (central systems and individual units), in thousand Btu, 2015
+"BTUELWTH",	# Numeric	8	Electricity usage for water heating, main and secondary, in thousand Btu, 2015
+"BTUELRFG",	# Numeric	8	Electricity usage for all refrigerators, in thousand Btu, 2015
+"BTUELRFG1",	# Numeric	8	Electricity usage for first refrigerators, in thousand Btu, 2015
+"BTUELRFG2",	# Numeric	8	Electricity usage for second refrigerators, in thousand Btu, 2015
+"BTUELFRZ",	# Numeric	8	Electricity usage for freezers, in thousand Btu, 2015
+"BTUELCOK",	# Numeric	8	Electricity usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015
+"BTUELMICRO",	# Numeric	8	Electricity usage for microwaves, in thousand Btu, 2015
+"BTUELCW",	# Numeric	8	Electricity usage for clothes washers, in thousand Btu, 2015
+"BTUELCDR",	# Numeric	8	Electricity usage for clothes dryers, in thousand Btu, 2015
+"BTUELDWH",	# Numeric	8	Electricity usage for dishwashers, in thousand Btu, 2015
+"BTUELLGT",	# Numeric	8	Electricity usage for indoor and outdoor lighting, in thousand Btu, 2015
+"BTUELTVREL",	# Numeric	8	Electricity usage for all televisions and related peripherals, in thousand Btu, 2015
+"BTUELTV1",	# Numeric	8	Electricity usage for first televisions, in thousand Btu, 2015
+"BTUELTV2",	# Numeric	8	Electricity usage for second televisions, in thousand Btu, 2015
+"BTUELAHUHEAT",	# Numeric	8	Electricity usage for air handlers and boiler pumps used for heating, in thousand Btu, 2015
+"BTUELAHUCOL",	# Numeric	8	Electricity usage for air handlers used for cooling, in thousand Btu, 2015
+"BTUELEVAPCOL",	# Numeric	8	Electricity usage for evaporative coolers, in thousand Btu, 2015
+"BTUELCFAN",	# Numeric	8	Electricity usage for ceiling fans, in thousand Btu, 2015
+"BTUELDHUM",	# Numeric	8	Electricity usage for dehumidifiers, in thousand Btu, 2015
+"BTUELHUM",	# Numeric	8	Electricity usage for humidifiers, in thousand Btu, 2015
+"BTUELPLPMP",	# Numeric	8	Electricity usage for swimming pool pumps, in thousand Btu, 2015
+"BTUELHTBPMP",	# Numeric	8	Electricity usage for hot tub pumps, in thousand Btu, 2015
+"BTUELHTBHEAT",	# Numeric	8	Electricity usage for hot tub heaters, in thousand Btu, 2015
+"BTUELNEC",	# Numeric	8	Electricity usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"DOLLAREL",	# Numeric	8	Total electricity cost, in dollars, 2015
+"DOLELSPH",	# Numeric	8	Electricity cost for space heating, main and secondary, in dollars, 2015
+"DOLELCOL",	# Numeric	8	Electricity cost for air conditioning (central systems and individual units), in dollars, 2015
+"DOLELWTH",	# Numeric	8	Electricity cost for water heating, main and secondary, in dollars, 2015
+"DOLELRFG",	# Numeric	8	Electricity cost for all refrigerators, in dollars, 2015
+"DOLELRFG1",	# Numeric	8	Electricity cost for first refrigerators, in dollars, 2015
+"DOLELRFG2",	# Numeric	8	Electricity cost for second refrigerators, in dollars, 2015
+"DOLELFRZ",	# Numeric	8	Electricity cost for freezers, in dollars, 2015
+"DOLELCOK",	# Numeric	8	Electricity cost for cooking (stoves, cooktops, and ovens), in dollars, 2015
+"DOLELMICRO",	# Numeric	8	Electricity cost for microwaves, in dollars, 2015
+"DOLELCW",	# Numeric	8	Electricity cost for clothes washers, in dollars, 2015
+"DOLELCDR",	# Numeric	8	Electricity cost for clothes dryers, in dollars, 2015
+"DOLELDWH",	# Numeric	8	Electricity cost for dishwashers, in dollars, 2015
+"DOLELLGT",	# Numeric	8	Electricity cost for indoor and outdoor lighting, in dollars, 2015
+"DOLELTVREL",	# Numeric	8	Electricity cost for all televisions and related peripherals, in dollars, 2015
+"DOLELTV1",	# Numeric	8	Electricity cost for first televisions, in dollars, 2015
+"DOLELTV2",	# Numeric	8	Electricity cost for second televisions, in dollars, 2015
+"DOLELAHUHEAT",	# Numeric	8	Electricity cost for air handlers and boiler pumps used for heating, in dollars, 2015
+"DOLELAHUCOL",	# Numeric	8	Electricity cost for air handlers used for cooling, in dollars, 2015
+"DOLELEVAPCOL",	# Numeric	8	Electricity cost for evaporative coolers, in dollars, 2015
+"DOLELCFAN",	# Numeric	8	Electricity cost for ceiling fans, in dollars, 2015
+"DOLELDHUM",	# Numeric	8	Electricity cost for dehumidifiers, in dollars, 2015
+"DOLELHUM",	# Numeric	8	Electricity cost for humidifiers, in dollars, 2015
+"DOLELPLPMP",	# Numeric	8	Electricity cost for swimming pool pumps, in dollars, 2015
+"DOLELHTBPMP",	# Numeric	8	Electricity cost for hot tub pumps, in dollars, 2015
+"DOLELHTBHEAT",	# Numeric	8	Electricity cost for hot tub heaters, in dollars, 2015
+"DOLELNEC",	# Numeric	8	Electricity cost for other devices and purposes not elsewhere classified, in dollars, 2015
+"CUFEETNG",	# Numeric	8	Total natural gas usage, in hundred cubic feet, 2015
+"CUFEETNGSPH",	# Numeric	8	Natural gas usage for space heating, main and secondary, in hundred cubic feet, 2015
+"CUFEETNGWTH",	# Numeric	8	Natural gas usage for water heating , main and secondary, in hundred cubic feet, 2015
+"CUFEETNGCOK",	# Numeric	8	Natural gas usage for cooking (stoves, cooktops, and ovens), in hundred cubic feet, 2015
+"CUFEETNGCDR",	# Numeric	8	Natural gas usage for clothes dryers, in hundred cubic feet, 2015
+"CUFEETNGPLHEAT",	# Numeric	8	Natural gas usage for swimming pool heaters, in hundred cubic feet, 2015
+"CUFEETNGHTBHEAT",	# Numeric	8	Natural gas usage for hot tub heaters, in hundred cubic feet, 2015
+"CUFEETNGNEC",	# Numeric	8	Natural gas usage for other devices and purposes not elsewhere classified, in hundred cubic feet, 2015
+"BTUNG",	# Numeric	8	Total natural gas usage, in thousand Btu, 2015
+"BTUNGSPH",	# Numeric	8	Natural gas usage for space heating, main and secondary, in thousand Btu, 2015
+"BTUNGWTH",	# Numeric	8	Natural gas usage for water heating, main and secondary, in thousand Btu, 2015
+"BTUNGCOK",	# Numeric	8	Natural gas usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015
+"BTUNGCDR",	# Numeric	8	Natural gas usage for clothes dryers, in thousand Btu, 2015
+"BTUNGPLHEAT",	# Numeric	8	Natural gas usage for swimming pool heaters, in thousand Btu, 2015
+"BTUNGHTBHEAT",	# Numeric	8	Natural gas usage for hot tub heaters, in thousand Btu, 2015
+"BTUNGNEC",	# Numeric	8	Natural gas usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"DOLLARNG",	# Numeric	8	Total natural gas cost, in dollars, 2015
+"DOLNGSPH",	# Numeric	8	Natural Gas cost for space heating, main and secondary, in dollars, 2015
+"DOLNGWTH",	# Numeric	8	Natural gas cost for water heating, main and secondary, in dollars, 2015
+"DOLNGCOK",	# Numeric	8	Natural gas cost for cooking (stoves, cooktops, and ovens), in dollars, 2015
+"DOLNGCDR",	# Numeric	8	Natural gas cost for clothes dryers, in dollars, 2015
+"DOLNGPLHEAT",	# Numeric	8	Natural gas cost for swimming pool heaters, in dollars, 2015
+"DOLNGHTBHEAT",	# Numeric	8	Natural gas cost for hot tub heaters, in dollars, 2015
+"DOLNGNEC",	# Numeric	8	Natural gas cost for other devices and purposes not elsewhere classified, in dollars, 2015
+"GALLONLP",	# Numeric	8	Total propane usage, in gallons, 2015
+"GALLONLPSPH",	# Numeric	8	Propane usage for space heating, main and secondary, in gallons, 2015
+"GALLONLPWTH",	# Numeric	8	Propane usage for water heating, main and secondary, in gallons, 2015
+"GALLONLPCOK",	# Numeric	8	Propane usage for cooking (stoves, cooktops, and ovens), in gallons, 2015
+"GALLONLPCDR",	# Numeric	8	Propane usage for clothes dryers, in gallons, 2015
+"GALLONLPNEC",	# Numeric	8	Propane usage for other devices and purposes not elsewhere classified, in gallons, 2015
+"BTULP",	# Numeric	8	Total propane usage, in thousand Btu, 2015
+"BTULPSPH",	# Numeric	8	Propane usage for space heating, main and secondary, in thousand Btu, 2015
+"BTULPWTH",	# Numeric	8	Propane usage for water heating, main and secondary, in thousand Btu, 2015
+"BTULPCOK",	# Numeric	8	Propane usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015
+"BTULPCDR",	# Numeric	8	Propane usage for clothes dryers, in thousand Btu, 2015
+"BTULPNEC",	# Numeric	8	Propane usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"DOLLARLP",	# Numeric	8	Total cost of propane, in dollars, 2015
+"DOLLPSPH",	# Numeric	8	Propane cost for space heating, main and secondary, in dollars, 2015
+"DOLLPWTH",	# Numeric	8	Propane cost for water heating, main and secondary, in dollars, 2015
+"DOLLPCOK",	# Numeric	8	Propane cost for cooking (stoves, cooktops, and ovens), in dollars, 2015
+"DOLLPCDR",	# Numeric	8	Propane cost for clothes dryers, in dollars, 2015
+"DOLLPNEC",	# Numeric	8	Propane cost for other devices and purposes not elsewhere classified, in dollars, 2015
+"GALLONFO",	# Numeric	8	Total fuel oil/kerosene usage, in gallons, 2015
+"GALLONFOSPH",	# Numeric	8	Fuel oil/kerosene usage for space heating, main and secondary, in gallons, 2015
+"GALLONFOWTH",	# Numeric	8	Fuel oil/kerosene usage for water heating, main and secondary, in gallons, 2015
+"GALLONFONEC",	# Numeric	8	Fuel oil/kerosene usage for other devices and purposes not elsewhere classified, in gallons, 2015
+"BTUFO",	# Numeric	8	Total fuel oil/kerosene usage, in thousand Btu, 2015
+"BTUFOSPH",	# Numeric	8	Fuel oil/kerosene usage for space heating, main and secondary, in thousand Btu, 2015
+"BTUFOWTH",	# Numeric	8	Fuel oil/kerosene usage for water heating, main and secondary, in thousand Btu, 2015
+"BTUFONEC",	# Numeric	8	Fuel oil/kerosene usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"DOLLARFO",	# Numeric	8	Total cost of fuel oil/kerosene, in dollars, 2015
+"DOLFOSPH",	# Numeric	8	Fuel oil/kerosene cost for space heating, main and secondary, in dollars, 2015
+"DOLFOWTH",	# Numeric	8	Fuel oil/kerosene cost for water heating, main and secondary, in dollars, 2015
+"DOLFONEC",	# Numeric	8	Fuel oil/kerosene cost for other devices and purposes not elsewhere classified, in dollars, 2015
+"TOTALBTU",	# Numeric	8	Total usage, in thousand Btu, 2015
+"TOTALDOL",	# Numeric	8	Total cost, in dollars, 2015 
+"TOTALBTUSPH",	# Numeric	8	Total usage for space heating, main and secondary, in thousand Btu, 2015
+"TOTALDOLSPH",	# Numeric	8	Total cost for space heating, main and secondary, in dollars, 2015
+"TOTALBTUWTH",	# Numeric	8	Total usage for water heating, main and secondary, in thousand Btu, 2015
+"TOTALDOLWTH",	# Numeric	8	Total cost for water heating, main and secondary, in dollars, 2015
+"TOTALBTUCOK",	# Numeric	8	Total usage for cooking (stoves, cooktops, and ovens), in thousand Btu, 2015
+"TOTALDOLCOK",	# Numeric	8	Total cost for cooking (stoves, cooktops, and ovens), in dollars, 2015
+"TOTALBTUCDR",	# Numeric	8	Total usage for clothes dryers, in thousand Btu, 2015
+"TOTALDOLCDR",	# Numeric	8	Total cost for clothes dryers, in dollars, 2015
+"TOTALBTUPL",	# Numeric	8	Total usage for swimming pool pumps and heaters, in thousand Btu, 2015
+"TOTALDOLPL",	# Numeric	8	Total cost for swimming pool pumps and heaters, in dollars, 2015
+"TOTALBTUHTB",	# Numeric	8	Total usage for hot tub pumps and heaters, in thousand Btu, 2015
+"TOTALDOLHTB",	# Numeric	8	Total cost for hot tub pumps and heaters, in dollars, 2015
+"TOTALBTUNEC",	# Numeric	8	Total usage for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"TOTALDOLNEC",	# Numeric	8	Total cost for other devices and purposes not elsewhere classified, in thousand Btu, 2015
+"WOODAMT",	# Numeric	8	Cords of wood used in the last year
+"ZWOODAMT",	# Numeric	8	Imputation flag for WOODAMT
+"WOODBTU",	# Numeric	8	Total cordwood usage, in thousand Btu, 2015 (Wood consumption is not included in TOTALBTU or TOTALDOL)
+"PELLETAMT",	# Numeric	8	Number of 40-pound wood pellet bags used in the last year
+"ZPELLETAMT",	# Numeric	8	Imputation flag for PELLETAMT
+"PELLETBTU"	# Numeric	8	Total wood pellet usage, in thousand Btu, 2015 (Wood consumption is not included in TOTALBTU or TOTALDOL)
